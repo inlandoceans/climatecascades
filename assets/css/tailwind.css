@@ -8,3 +8,7 @@
 .nuxt-content-highlight .filename {
   @apply absolute right-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
 }
+
+html {
+  font-family: 'Crimson Text', 'Spectral', serif;
+}

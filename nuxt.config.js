@@ -24,7 +24,22 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {
+        rel: 'dns-prefetch',
+        href: '//fonts.googleapis.com'
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com/'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Spectral&display=swap'
+      }
+    ]
   },
   /*
    ** Global CSS

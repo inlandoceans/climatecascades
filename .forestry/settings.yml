@@ -11,7 +11,7 @@ sections:
   match: "**/*"
 upload_dir: climatecascades
 public_path: https://res.cloudinary.com/devy3xovo/image/upload/f_auto,q_auto,c_scale,w_auto:100,dpr_auto
-front_matter_path: https://res.cloudinary.com/devy3xovo/image/upload
+front_matter_path: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto
 use_front_matter_path: true
 file_template: ":filename:"
 build:

@@ -4,7 +4,9 @@
       <div class="py-8 text-center">
         <img :src="article.img" :alt="article.alt" class="" />
 
-        <h1 class="text-4xl md:text-6xl font-bold">{{ article.title }}</h1>
+        <h1 class="beforeafter text-4xl md:text-6xl font-bold">
+          {{ article.title }}
+        </h1>
         <span v-for="(tag, id) in article.tags" :key="id">
           <NuxtLink :to="`/tag/${tags[tag].slug}`">
             <span
@@ -14,7 +16,7 @@
             </span>
           </NuxtLink>
         </span>
-        <p class="py-2 text-lg">{{ article.description }}</p>
+        <p class="font-spectral py-2 text-lg">{{ article.description }}</p>
         <div class="mx-24 h-1 bg-gradient-to-r from-blue-800 to-red-800"></div>
         <div class="text-center mt-8 uppercase text-sm text-red-800">
           <span class="mr-3">
@@ -51,7 +53,7 @@
         </nav>
         <!-- content from markdown -->
         <nuxt-content :document="article" max-w-2xl />
-        <p class="pb-4">
+        <p class="pb-4 font-spectral">
           Post last updated: {{ formatDate(article.updatedAt) }}
         </p>
         <!-- content author component -->
@@ -178,9 +180,43 @@ export default {
 }
 </script>
 <style>
+.beforeafter {
+  border: 1px solid red;
+}
+
+.beforeafter::before {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  border: 3px solid red;
+}
+.beforeafter::after {
+  width: 1px;
+  height: 400px;
+  content: '\0020';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: red;
+}
+
 .nuxt-content p {
   margin-bottom: 20px;
+  font-family: spectral, serif;
 }
+
+.nuxt-content a {
+  color: red;
+}
+
+.nuxt-content a:hover {
+  color: aqua;
+}
+
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;

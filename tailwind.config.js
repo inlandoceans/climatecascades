@@ -7,19 +7,17 @@
 module.exports = {
   theme: {
     screens: {
-      xs: '320px',
       sm: '640px',
       md: '768px',
-      lg: '1024px',
+      lg: '960x',
       xl: '1280px',
       xxlmin: '1351px',
       xxlmax: { max: '1350px' }
     },
     fontFamily: {
-      display: ['Quicksand', 'sans-serif'],
-      body: ['Quicksand', 'sans-serif'],
       spectral: ['Spectral', 'serif'],
-      crimson: ['Crimson Text', 'serif']
+      crimson: ['Crimson Text', 'serif'],
+      body: ['Spectral', 'serif']
     },
     borderWidth: {
       default: '1px',

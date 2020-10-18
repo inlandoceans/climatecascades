@@ -2,7 +2,7 @@
 title: Cosmic Climate Change
 description: What if it's all just cosmic rays man, the sun is coming for us. We've
   been feeding on energy for far too long!
-img: turtle_qq6yjv
+img: https://res.cloudinary.com/devy3xovo/image/upload/v1603027834/climatecascades/turtle_qq6yjv.jpg
 alt: ''
 author:
   name: David

@@ -10,9 +10,9 @@ sections:
   create: all
   match: "**/*"
 upload_dir: climatecascades
-public_path: climatecascades
-front_matter_path: ''
-use_front_matter_path: 
+public_path: https://res.cloudinary.com/devy3xovo/image/upload/f_auto,q_auto,c_scale,w_auto:100,dpr_auto
+front_matter_path: https://res.cloudinary.com/devy3xovo/image/upload
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   install_dependencies_command: npm install

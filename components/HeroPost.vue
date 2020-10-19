@@ -6,7 +6,7 @@
         :style="{ backgroundImage: `url(${post.img})` }"
       >
         <div class="herobox relative z-10 py-4">
-          <h2 class="text-6xl font-bold text-white">
+          <h2 class="text-6xl font-bold text-white px-5">
             {{ post.title }}
           </h2>
           <span class="mr-3 text-white font-bold">

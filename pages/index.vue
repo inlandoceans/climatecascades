@@ -34,18 +34,28 @@ export default {
     Articles
   },
   async asyncData({ $content, params }) {
-    const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author', 'feature'])
+    const allArticles = await $content('articles', params.slug)
+      .only(['title', 'description', 'img', 'slug', 'author', 'category'])
       .sortBy('createdAt', 'desc')
       .fetch()
     const tags = await $content('tags', params.slug)
       .only(['name', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
-    const heroPost = articles[0]
+    const articles = allArticles.filter(
+      (article) => article.category === 'react'
+    )
+    const allFeatures = allArticles.filter(
+      (article) => article.category === 'feature'
+    )
+    const heroPost = allFeatures[0]
+    const features = allFeatures.slice(1, allFeatures.length)
+
     return {
       articles,
+      features,
       heroPost,
+      allFeatures,
       tags
     }
   }

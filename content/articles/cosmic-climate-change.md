@@ -9,7 +9,7 @@ author:
   bio: David is a man.
   img: ''
 tags: []
-feature: true
+category: feature
 
 ---
 ## Universal transgressions

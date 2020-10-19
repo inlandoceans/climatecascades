@@ -11,7 +11,7 @@ tags:
   - nuxtjs
   - web development
 
-feature: true
+category: feature
 ---
 
 ## Welcome to another blog post using content module

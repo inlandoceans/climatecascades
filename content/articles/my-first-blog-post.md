@@ -10,6 +10,8 @@ author:
 tags: 
   - nuxtjs
   - javascript
+
+category: react
 ---
 
 Welcome to my first blog post using content module

@@ -10,6 +10,7 @@ author:
 tags: 
   - nuxtjs
   - web development
+category: react
 ---
 ## what do you know and what do we not know
 

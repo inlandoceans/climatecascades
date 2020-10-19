@@ -1,7 +1,7 @@
 <template>
   <article>
     <!-- Layout for features -->
-    <div v-if="article.category === 'feature'">
+    <div v-if="template">
       <div class="py-8 text-center">
         <img :src="article.img" :alt="article.alt" class="" />
 
@@ -18,7 +18,7 @@
           </NuxtLink>
         </span>
         <p class="font-spectral py-2 text-lg">{{ article.description }}</p>
-        <div class="mx-24 h-1 bg-gradient-to-r from-blue-800 to-red-800"></div>
+
         <div class="text-center mt-8 uppercase text-sm text-red-800">
           <span class="mr-3">
             {{ formatDate(article.updatedAt) }}
@@ -65,7 +65,7 @@
     </div>
     <!-- Layout for non features -->
     <div
-      v-if="article.feature !== 'feature'"
+      v-if="!template"
       class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
     >
       <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
@@ -168,11 +168,13 @@ export default {
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
+    const template = article.category === 'feature'
     return {
       article,
       tags,
       prev,
-      next
+      next,
+      template
     }
   },
   computed: {

@@ -1,8 +1,7 @@
 const type = 'website'
-const url = 'https://bobross.com'
-const title = 'My Amazing Blog on The Joy of Painting'
-const description =
-  'Articles focused on the beautiful art of landscape painting.'
+const url = 'https://climatecascades.com'
+const title = 'Climate Cascades'
+const description = 'Climate Change, Geopolitics, and Technology.'
 const mainImage = '/a-lovely-image.png'
 
 export default (meta) => {

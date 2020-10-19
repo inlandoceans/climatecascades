@@ -1,6 +1,6 @@
 <template>
   <div class="box-border">
-    <HeroPost :post="heroPost" />
+    <HeroPost :post="heroPost" :date="date" />
 
     <div>
       <h2 class="text-2xl text-red-800 font-extrabold">Reacts</h2>
@@ -39,7 +39,15 @@ export default {
   },
   async asyncData({ $content, params }) {
     const allArticles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author', 'category'])
+      .only([
+        'title',
+        'description',
+        'img',
+        'slug',
+        'author',
+        'createdAt',
+        'category'
+      ])
       .sortBy('createdAt', 'desc')
       .fetch()
     const tags = await $content('tags', params.slug)

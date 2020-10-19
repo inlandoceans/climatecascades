@@ -34,4 +34,5 @@ fields:
   name: category
   label: category
 pages:
+- content/articles/in-nepal-where-the-rain-falls.md
 - content/articles/the-oceans.md

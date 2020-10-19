@@ -1,6 +1,6 @@
 <template>
   <article>
-    <div v-if="article.feature">
+    <div v-if="article.category === 'feature'">
       <div class="py-8 text-center">
         <img :src="article.img" :alt="article.alt" class="" />
 
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div
-      v-if="!article.feature"
+      v-if="article.feature !== 'feature'"
       class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
     >
       <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">

@@ -5,7 +5,7 @@
         :to="{ name: 'post-slug', params: { slug: post.slug } }"
         class="col-span-3 transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md"
       >
-        <img class="w-12" :src="post.img" :alt="post.title" />
+        <img class="" :src="post.img" :alt="post.title" />
       </NuxtLink>
     </div>
     <div class="mx-8 px-5 md:col-span-4 py-5">

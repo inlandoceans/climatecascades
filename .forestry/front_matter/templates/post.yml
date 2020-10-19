@@ -33,3 +33,5 @@ fields:
 - type: text
   name: category
   label: category
+pages:
+- content/articles/the-oceans.md

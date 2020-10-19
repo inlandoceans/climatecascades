@@ -2,8 +2,8 @@
 title: The Arctic
 description: The Arctic (/ˈɑːrktɪk/ or /ˈɑːrtɪk/)[1][Note 1] is a polar region located
   at the northernmost part of Earth.
-img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603030047/climatecascades/arctic_raaphs.png
-alt: ''
+img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603030685/climatecascades/polar_jbsk7e.jpg
+alt: Polar thoughts
 author:
   name: David
   bio: ''
@@ -12,6 +12,7 @@ tags: []
 feature: true
 cover: https://res.cloudinary.com/devy3xovo/image/upload/v1603030685/climatecascades/polar_jbsk7e.jpg
 category: feature
+
 ---
 ## The Arctic
 

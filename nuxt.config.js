@@ -7,7 +7,6 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -81,8 +80,13 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // Doc: https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/
+    '@nuxtjs/color-mode'
   ],
+  purgeCSS: {
+    whitelist: ['dark-mode', 'bg-mayas-green-dark']
+  },
   /*
    ** Nuxt.js modules
    */

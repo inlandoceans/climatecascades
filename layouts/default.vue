@@ -1,5 +1,5 @@
 <template>
-  <div class="container max-w-screen-lg mx-auto my-4">
+  <div class="container max-w-screen-lg mx-auto my-4 dark:bg-gray-700">
     <TheHeader />
     <Nuxt />
   </div>

@@ -11,6 +11,9 @@
       </h1>
       <h1 class="sm:hidden px-5 uppercase text-4xl font-extrabold">CC</h1>
     </NuxtLink>
+
+    <button @click="toggle">Change Theme</button>
+
     <!-- <AppSearchInput class="ml-8 items-center" /> -->
     <!-- <NuxtLink to="/regions">
       <p class="text-red-800 font-bold">Regions</p>
@@ -20,3 +23,13 @@
     </NuxtLink> -->
   </header>
 </template>
+<script>
+export default {
+  methods: {
+    toggle() {
+      this.$colorMode.preference =
+        this.$colorMode.value === 'light' ? 'dark' : 'light'
+    }
+  }
+}
+</script>

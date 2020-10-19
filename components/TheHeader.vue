@@ -4,12 +4,10 @@
   >
     <NuxtLink to="/"><Logo class="mb-4" /></NuxtLink>
     <NuxtLink to="/">
-      <h1
-        class="hidden sm:block px-5 uppercase sm:text-2xl md:text-4xl font-extrabold"
-      >
+      <h1 class="hidden sm:block px-5 sm:text-2xl md:text-4xl font-extrabold">
         Climate Cascades
       </h1>
-      <h1 class="sm:hidden px-5 uppercase text-4xl font-extrabold">CC</h1>
+      <h1 class="sm:hidden px-5 text-4xl font-extrabold">CC</h1>
     </NuxtLink>
 
     <button @click="toggle">Change Theme</button>

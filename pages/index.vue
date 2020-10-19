@@ -1,8 +1,7 @@
 <template>
-  <div class="mx-5 py-5">
-    <div>
-      <HeroPost :post="heroPost" />
-    </div>
+  <div class="box-border">
+    <HeroPost :post="heroPost" />
+
     <div class="mx-4 my-4 h-1 bg-gradient-to-r from-blue-800 to-red-800"></div>
 
     <div>

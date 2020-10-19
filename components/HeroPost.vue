@@ -1,16 +1,19 @@
 <template>
-  <div class="container grid md:grid-cols-12 mb-2 mx-auto">
-    <div class="md:col-span-8">
-      <NuxtLink
-        :to="{ name: 'post-slug', params: { slug: post.slug } }"
-        class="col-span-3 transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md"
-      >
-        <img class="" :src="post.img" :alt="post.title" />
-      </NuxtLink>
-    </div>
-    <div class="mx-8 px-5 md:col-span-4 py-5">
+  <div
+    class="heroImage px-16 py-24 opacity-100"
+    :style="{ backgroundImage: `url(${post.img})` }"
+  >
+    <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }" class="">
+      <!-- <img
+          class="relative items-center text-center"
+          :src="post.img"
+          :alt="post.title"
+        /> -->
+    </NuxtLink>
+
+    <div class="relative z-10">
       <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }">
-        <h2 class="sm:text-2xl lg:text-4xl font-extrabold">
+        <h2 class="text-6xl font-extrabold text-white">
           {{ post.title }}
         </h2>
         <span class="mr-3">
@@ -19,7 +22,7 @@
         <p class="text-sm font-spectral text-red-900">
           by {{ post.author.name }}
         </p>
-        <p class="font-spectral text-md py-5">
+        <p class="mx-auto font-spectral text-md py-5">
           {{ post.description }}
         </p>
       </NuxtLink>
@@ -36,3 +39,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+.heroImage {
+  background-position-x: 50%;
+  background-position-y: 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+</style>

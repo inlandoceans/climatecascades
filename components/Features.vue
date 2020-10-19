@@ -1,6 +1,6 @@
 <template>
   <div class="grid md:grid-cols-3 row-gap-4 col-gap-2">
-    <div v-for="article of articles" :key="article.slug" class="col-span-1">
+    <div v-for="article of features" :key="article.slug" class="col-span-1">
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
         class="transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md"
@@ -22,7 +22,7 @@
 <script>
 export default {
   props: {
-    articles: {
+    features: {
       type: Array,
       default: () => []
     }

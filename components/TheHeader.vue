@@ -1,22 +1,39 @@
 <template>
-  <header class="flex text-center items-center mx-5">
-    <NuxtLink to="/"><Logo class="mb-4" /></NuxtLink>
+  <header class="text-center">
     <NuxtLink to="/">
-      <h1 class="hidden sm:block px-5 sm:text-2xl md:text-4xl font-extrabold">
-        Climate Cascades
-      </h1>
-      <h1 class="sm:hidden px-5 text-4xl font-extrabold">CC</h1>
+      <span class="text-6xl leading-none dark:text-gray-400"> Climate</span>
+      <span class="uppercase text-2xl dark:text-gray-400">Cascades</span>
     </NuxtLink>
-
-    <button @click="toggle">Change Theme</button>
+    <NuxtLink to="/"
+      ><img src="/logo.png" alt="logo" class="text-center mx-auto mb-4"
+    /></NuxtLink>
+    <!--  -->
 
     <!-- <AppSearchInput class="ml-8 items-center" /> -->
-    <!-- <NuxtLink to="/regions">
-      <p class="text-red-800 font-bold">Regions</p>
-    </NuxtLink>
-    <NuxtLink to="/about">
-      <p class="text-red-800 font-bold">About</p>
-    </NuxtLink> -->
+    <nav
+      class="flex mx-auto text-center my-4 py-4 border-t border-solid border-blue-800 dark:border-white"
+    >
+      <ul
+        class="mx-auto flex font-spectral font-semibold text-center uppercase text-red-900 dark:text-pacific"
+      >
+        <NuxtLink to="/topics"> <li class="">Topics</li></NuxtLink>
+        <li class="mx-3">•</li>
+
+        <NuxtLink to="/regions"> <li class="">Regions</li> </NuxtLink>
+        <li class="mx-3">•</li>
+
+        <NuxtLink to="/archive"> <li class="">Archive</li></NuxtLink>
+        <li class="mx-3">•</li>
+
+        <NuxtLink to="/about"> <li class="">About</li></NuxtLink>
+        <li class="mx-3">•</li>
+        <li>
+          <button class="uppercase font-spectral font-semibold" @click="toggle">
+            Theme
+          </button>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 <script>

@@ -1,13 +1,19 @@
 <template>
   <div class="box-border">
-    <HeroPost :post="heroPost" :date="date" />
+    <HeroPost :post="heroPost" />
 
-    <div>
-      <h2 class="text-2xl text-red-800 font-extrabold">Reacts</h2>
+    <div class="mx-8">
+      <h2
+        class="text-2xl uppercase font-spectral text-red-800 font-extrabold dark:text-pacific"
+      >
+        Reacts
+      </h2>
       <Articles :articles="articles" />
     </div>
     <div>
-      <h2 class="text-2xl text-red-800 font-extrabold">Features</h2>
+      <h2 class="text-2xl text-red-800 font-extrabold dark:text-pacific">
+        Features
+      </h2>
       <Features :features="features" />
     </div>
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
@@ -46,7 +52,9 @@ export default {
         'slug',
         'author',
         'createdAt',
-        'category'
+        'category',
+        'tags',
+        'id'
       ])
       .sortBy('createdAt', 'desc')
       .fetch()

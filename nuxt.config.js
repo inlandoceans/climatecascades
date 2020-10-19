@@ -53,7 +53,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Spectral&display=swap'
+          'https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Spectral&Cormorant+Garamond:wght@600&display=swap'
       }
     ]
   },

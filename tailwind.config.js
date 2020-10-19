@@ -18,7 +18,8 @@ module.exports = {
     fontFamily: {
       spectral: ['Spectral', 'serif'],
       crimson: ['Crimson Text', 'serif'],
-      body: ['Spectral', 'serif']
+      corgar: ['Cormorant Garamond', 'serif'],
+      body: ['Cormorant Garamond', 'serif']
     },
     borderWidth: {
       default: '1px',
@@ -28,7 +29,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        cyan: '#9cdbff'
+        cyan: '#9cdbff',
+        gunmetal: '#0B191E',
+        pacific: '#23B5D3',
+        gains: '#DFE0E2'
       },
       spacing: {
         96: '24rem',

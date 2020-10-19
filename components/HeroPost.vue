@@ -6,17 +6,17 @@
         :style="{ backgroundImage: `url(${post.img})` }"
       >
         <div class="herobox relative z-10 py-4">
-          <h2 class="text-6xl font-bold text-white px-5">
+          <h2 class="max-w-lg text-4xl font-bold text-white px-5">
             {{ post.title }}
           </h2>
-          <span class="mr-3 text-white font-bold">
+          <span class="uppercase text-white font-bold">
             {{ formatDate(post.createdAt) }}
           </span>
           <!-- <p class="text-sm font-spectral text-white">
             by {{ post.author.name }}
           </p> -->
           <p
-            class="max-w-md mx-auto my-5 text-white text-xl font-bold font-spectral text-md"
+            class="max-w-md mx-auto mt-6 mb-4 text-white text-lg font-spectral"
           >
             {{ post.description }}
           </p>

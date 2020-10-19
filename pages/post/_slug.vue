@@ -1,5 +1,6 @@
 <template>
   <article>
+    <!-- Layout for features -->
     <div v-if="article.category === 'feature'">
       <div class="py-8 text-center">
         <img :src="article.img" :alt="article.alt" class="" />
@@ -62,6 +63,7 @@
         <PrevNext :prev="prev" :next="next" class="mt-8" />
       </div>
     </div>
+    <!-- Layout for non features -->
     <div
       v-if="article.feature !== 'feature'"
       class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"

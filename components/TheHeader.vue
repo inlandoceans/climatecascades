@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="flex text-center items-center border-b border-solid border-blue-900 mx-5"
-  >
+  <header class="flex text-center items-center mx-5">
     <NuxtLink to="/"><Logo class="mb-4" /></NuxtLink>
     <NuxtLink to="/">
       <h1 class="hidden sm:block px-5 sm:text-2xl md:text-4xl font-extrabold">

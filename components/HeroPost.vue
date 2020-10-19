@@ -22,10 +22,13 @@
         <p class="text-sm font-spectral text-red-900">
           by {{ post.author.name }}
         </p>
-        <p class="mx-auto font-spectral text-md py-5">
+        <p
+          class="text-white text-lg font-bold mx-auto font-spectral text-md py-5"
+        >
           {{ post.description }}
         </p>
       </NuxtLink>
+      ::after
     </div>
   </div>
 </template>
@@ -42,7 +45,7 @@ export default {
 <style scoped>
 .heroImage {
   background-position-x: 50%;
-  background-position-y: 25%;
+  background-position-y: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
@@ -52,5 +55,16 @@ export default {
   position: relative;
   text-align: center;
   box-sizing: border-box;
+}
+.heroImage::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 </style>

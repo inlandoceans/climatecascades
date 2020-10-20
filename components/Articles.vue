@@ -1,5 +1,5 @@
 <template>
-  <div class="grid md:grid-cols-3 gap-x-8 gap-y-4">
+  <div class="grid md:grid-cols-3 gap-x-12 gap-y-4">
     <div
       v-for="article of articles"
       :key="article.slug"

@@ -2,16 +2,29 @@
   <div class="box-border">
     <HeroPost :post="heroPost" />
     <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
-      <h2 class="text-4xl font-spectral dark:text-darktitle">Reacts</h2>
-
+      <div class="flex justify-between items-center">
+        <NuxtLink to="/reacts">
+          <h2 class="text-4xl font-spectral dark:text-darktitle">Reacts</h2>
+        </NuxtLink>
+        <NuxtLink to="/reacts">
+          <h3 class="uppercase mr-6">All Reacts</h3>
+        </NuxtLink>
+      </div>
       <Articles :articles="articles" />
     </div>
     <div class="box-border bg-red-900 h-16"></div>
     <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
-      <h2 class="text-4xl font-spectral dark:text-darktitle">Features</h2>
+      <div class="flex justify-between items-center">
+        <NuxtLink to="/features">
+          <h2 class="text-4xl font-spectral dark:text-darktitle">Features</h2>
+        </NuxtLink>
+        <NuxtLink to="/features">
+          <h3 class="uppercase mr-6">All Features</h3>
+        </NuxtLink>
+      </div>
       <Features :features="features" />
     </div>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
+    <!-- <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
     <ul class="flex flex-wrap mb-4 text-center">
       <li
         v-for="tag of tags"
@@ -24,7 +37,8 @@
           </p>
         </NuxtLink>
       </li>
-    </ul>
+    </ul> -->
+    <div class="box-border bg-blue-900 h-16"></div>
   </div>
 </template>
 

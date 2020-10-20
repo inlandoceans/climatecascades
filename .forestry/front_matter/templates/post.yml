@@ -12,7 +12,7 @@ fields:
   label: Description
   config:
     required: true
-    max: 50
+    max: 
     min: 20
 - name: author
   type: select

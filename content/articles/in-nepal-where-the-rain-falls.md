@@ -4,14 +4,12 @@ publishDate: 2020/10/19 1:23 PM +0000
 description: Exploring small bodies in the solar system provides clues to origins
   has now become an essential path towards long term survival. How can humanity approach
   these new frontiers?
-img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603124426/climatecascades/IMG_20191124_082538_rzt71j.jpg
+img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603209999/climatecascades/nepal2_jvoyzm.jpg
 alt: ''
-author:
-  name: ''
-  bio: ''
-  img: ''
+author: David
 topics: []
 category: feature
+tags: []
 
 ---
 ## Cosmic origins

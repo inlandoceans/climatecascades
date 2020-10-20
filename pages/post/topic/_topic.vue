@@ -4,8 +4,8 @@
   >
     <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
       <img
-        :src="tag.img"
-        :alt="tag.name"
+        :src="topic.img"
+        :alt="topic.name"
         class="absolute h-full w-full object-cover"
       />
     </div>
@@ -16,11 +16,11 @@
       <div class="mt-16 -mb-3 flex flex-col text-sm">
         <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
           <h1 class="text-4xl font-bold uppercase">
-            {{ tag.name }}
+            {{ topic.name }}
           </h1>
-          <p class="mb-4 uppercase">{{ tag.description }}</p>
+          <p class="mb-4 uppercase">{{ topic.description }}</p>
 
-          <nuxt-content :document="tag" />
+          <nuxt-content :document="topic" />
         </div>
       </div>
     </div>
@@ -30,7 +30,9 @@
       <NuxtLink to="/"
         ><p class="hover:underline">Back to All Articles</p></NuxtLink
       >
-      <h3 class="mb-4 font-bold text-4xl">Articles tagged {{ tag.name }}:</h3>
+      <h3 class="mb-4 font-bold text-4xl">
+        Articles topicged {{ topic.name }}:
+      </h3>
       <ul>
         <li
           v-for="article in articles"
@@ -67,18 +69,18 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const tags = await $content('tags')
-      .where({ slug: { $contains: params.tag } })
+    const topics = await $content('topics')
+      .where({ slug: { $contains: params.topic } })
       .limit(1)
       .fetch()
-    const tag = tags.length > 0 ? tags[0] : {}
+    const topic = topics.length > 0 ? topics[0] : {}
     const articles = await $content('articles', params.slug)
-      .where({ tags: { $contains: tag.name } })
+      .where({ topics: { $contains: topic.name } })
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
       articles,
-      tag
+      topic
     }
   }
 }

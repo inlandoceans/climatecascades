@@ -8,12 +8,12 @@
         <h1 class="beforeafter text-6xl font-semibold">
           {{ article.title }}
         </h1>
-        <span v-for="(tag, id) in article.tags" :key="id">
-          <NuxtLink :to="`/tag/${tags[tag].slug}`">
+        <span v-for="(topic, id) in article.topics" :key="id">
+          <NuxtLink :to="`/topic/${topics[topic].slug}`">
             <span
               class="truncate uppercase tracking-wider font-medium text-sm px-2 py-1 rounded mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
             >
-              {{ tags[tag].name }}
+              {{ topics[topic].name }}
             </span>
           </NuxtLink>
         </span>
@@ -83,12 +83,12 @@
           <p>{{ article.author.name }}</p>
         </div>
         <h1 class="text-6xl font-bold">{{ article.title }}</h1>
-        <span v-for="(tag, id) in article.tags" :key="id">
-          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+        <span v-for="(topic, id) in article.topics" :key="id">
+          <NuxtLink :to="`/blog/topic/${topics[topic].slug}`">
             <span
               class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
             >
-              {{ tags[tag].name }}
+              {{ topics[topic].name }}
             </span>
           </NuxtLink>
         </span>
@@ -155,11 +155,14 @@ import getSiteMeta from '@/utils/getSiteMeta'
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
-    const tagsList = await $content('tags')
+    const topicsList = await $content('topics')
       .only(['name', 'slug'])
-      .where({ name: { $containsAny: article.tags } })
+      .where({ name: { $containsAny: article.topics } })
       .fetch()
-    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })))
+    const topics = Object.assign(
+      {},
+      ...topicsList.map((s) => ({ [s.name]: s }))
+    )
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
@@ -168,7 +171,7 @@ export default {
     const template = article.category === 'feature'
     return {
       article,
-      tags,
+      topics,
       prev,
       next,
       template
@@ -201,15 +204,15 @@ export default {
           content: this.article.updatedAt
         },
         {
-          property: 'article:tag',
-          content: this.article.tags ? this.article.tags.toString() : ''
+          property: 'article:topic',
+          content: this.article.topics ? this.article.topics.toString() : ''
         },
         { name: 'twitter:label1', content: 'Written by' },
         { name: 'twitter:data1', content: this.article.author },
         { name: 'twitter:label2', content: 'Filed under' },
         {
           name: 'twitter:data2',
-          content: this.article.tags ? this.article.tags.toString() : ''
+          content: this.article.topics ? this.article.topics.toString() : ''
         }
       ],
       link: [

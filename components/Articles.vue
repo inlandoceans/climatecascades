@@ -20,11 +20,11 @@
         class=""
       >
         <div class="">
-          <span v-for="tag in article.tags" :key="tag">
+          <span v-for="topic in article.topics" :key="topic">
             <span
               class="truncate font-spectral lowercase text-sm text-gray-600 my-4"
             >
-              {{ tag }}
+              {{ topic }}
             </span>
           </span>
           <h2

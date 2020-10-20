@@ -18,7 +18,7 @@
             by {{ post.author.name }}
           </p> -->
           <p
-            class="max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg font-crimsonpro"
+            class="px-10 max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg font-crimsonpro"
           >
             {{ post.description }}
           </p>

@@ -1,6 +1,6 @@
 ---
 title: Cosmic Climate Change
-publishDate: 08/08/2020 12:31 PM +0000
+publishDate: 2016/10/20 1:23 PM +0000
 description: What if it's all just cosmic rays man, the sun is coming for us. We've
   been feeding on energy for far too long!
 img: https://res.cloudinary.com/devy3xovo/image/upload/v1603027834/climatecascades/turtle_qq6yjv.jpg

@@ -1,6 +1,6 @@
 ---
 title: Article about me
-publishDate: 10/15/2020 12:31 PM +0000
+publishDate: 2020/10/15 1:23 PM +0000
 description: This is a description for the article about me
 img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
 alt: nice image

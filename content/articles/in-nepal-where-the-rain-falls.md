@@ -1,6 +1,6 @@
 ---
 title: In Nepal where the rain falls
-publishDate: 10/20/2020 12:31 PM +0000
+publishDate: 2020/10/19 1:23 PM +0000
 description: Exploring small bodies in the solar system provides clues to origins
   has now become an essential path towards long term survival. How can humanity approach
   these new frontiers?

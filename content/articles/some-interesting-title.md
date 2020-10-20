@@ -1,6 +1,6 @@
 ---
 title: Some Interesting title
-publishDate: 10/01/2020 12:31 PM +0000
+publishDate: 2020/10/14 1:23 PM +0000
 description: Learning how to use @nuxt/content to create a blog again
 img: https://images.unsplash.com/photo-1588336271629-1704e27ef8be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2158&q=80
 alt: nice image

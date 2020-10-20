@@ -1,6 +1,6 @@
 ---
 title: The Arctic
-publishDate: 10/20/2020 12:05 PM +0000
+publishDate: 2020/10/15 1:23 PM +0000
 description: The Arctic (/ˈɑːrktɪk/ or /ˈɑːrtɪk/)[1][Note 1] is a polar region located
   at the northernmost part of Earth.
 img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603030685/climatecascades/polar_jbsk7e.jpg

@@ -22,7 +22,7 @@
         <NuxtLink to="/regions"> <li class="">Regions</li> </NuxtLink>
         <li class="mx-3">•</li>
 
-        <NuxtLink to="/archive"> <li class="">Archive</li></NuxtLink>
+        <NuxtLink to="/archives"> <li class="">Archives</li></NuxtLink>
         <li class="mx-3">•</li>
 
         <NuxtLink to="/about"> <li class="">About</li></NuxtLink>

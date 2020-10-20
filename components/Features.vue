@@ -1,9 +1,9 @@
 <template>
-  <div class="grid gap-y-8">
+  <div class="grid gap-y-2">
     <div
       v-for="article of features"
       :key="article.slug"
-      class="my-4 grid grid-cols-5 gap-4"
+      class="my-4 grid grid-cols-5 gap-x-4"
     >
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
@@ -12,7 +12,7 @@
         <img
           :src="article.img"
           :alt="article.alt"
-          class="w-full md:h-48 lg:h-64 object-cover"
+          class="w-full h-48 object-cover object-top"
         />
       </NuxtLink>
       <NuxtLink
@@ -35,7 +35,7 @@
             By {{ article.author.name }}
           </span>
 
-          <p class="my-2 font-spectral text-md dark:text-darkcontent">
+          <p class="my-2 font-crimsonpro text-lg dark:text-darkcontent">
             {{ article.description }}
           </p>
         </div>

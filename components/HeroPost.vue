@@ -11,7 +11,7 @@
           >
             {{ post.title }}
           </h2>
-          <span class="uppercase text-white font-bold">
+          <span class="uppercase text-white dark:text-darktitle font-bold">
             {{ $formatDate(post.publishDate) }}
           </span>
           <!-- <p class="text-sm font-spectral text-white">

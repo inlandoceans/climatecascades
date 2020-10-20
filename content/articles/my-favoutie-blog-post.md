@@ -1,5 +1,6 @@
 ---
 title: My favorite Blog Post
+publishDate: 10/19/2020 12:31 PM +0000
 description: This is a description for a blog post
 img: https://images.unsplash.com/photo-1540066916271-41e339fd2f23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80
 alt: my fifth blog post

@@ -1,5 +1,6 @@
 ---
 title: Great Article
+publishDate: 10/17/2020 12:31 PM +0000
 description: I am a description of a great article
 img: https://images.unsplash.com/photo-1588514727390-91fd5ebaef81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=639&q=80
 alt: article 7

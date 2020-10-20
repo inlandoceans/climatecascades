@@ -61,11 +61,12 @@ export default {
         'slug',
         'author',
         'createdAt',
+        'publishDate',
         'category',
         'tags',
         'id'
       ])
-      .sortBy('createdAt', 'desc')
+      .sortBy('publishDate', 'desc')
       .fetch()
     const tags = await $content('tags', params.slug)
       .only(['name', 'description', 'img', 'slug'])

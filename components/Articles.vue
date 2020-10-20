@@ -35,7 +35,7 @@
           <span
             class="uppercase text-red-900 dark:text-darkhighlight text-sm font-bold"
           >
-            {{ formatDate(article.createdAt) }}
+            {{ $formatDate(article.publishDate) }}
           </span>
           <span class="mx-2 dark:text-darkhighlight">•</span>
           <span class="text-red-900 text-md dark:text-darkhighlight">
@@ -56,12 +56,6 @@ export default {
     articles: {
       type: Array,
       default: () => []
-    }
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
     }
   }
 }

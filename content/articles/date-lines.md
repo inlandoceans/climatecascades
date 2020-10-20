@@ -1,7 +1,7 @@
 ---
-publish_date: 10/20/2020 12:31 PM +0000
+publishDate: 10/20/2020 08:31 AM +0000
 title: Date lines
-description: ''
+description: 'Whatever holmes'
 img: ''
 alt: ''
 author:
@@ -9,6 +9,6 @@ author:
   bio: ''
   img: ''
 tags: []
-category: ''
+category: 'feature'
 
 ---

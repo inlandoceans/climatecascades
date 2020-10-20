@@ -21,7 +21,7 @@
 
         <div class="text-center mt-8 uppercase text-sm text-red-800">
           <span class="mr-3">
-            {{ formatDate(article.updatedAt) }}
+            {{ $formatDate(article.updatedAt) }}
           </span>
           <span class="mr-3">•</span>
           <NuxtLink :to="`/author/${article.author.name}`">
@@ -55,7 +55,7 @@
         <!-- content from markdown -->
         <nuxt-content :document="article" class="font-crimsonpro text-lg" />
         <p class="pb-4 font-spectral">
-          Post last updated: {{ formatDate(article.updatedAt) }}
+          Post last updated: {{ $formatDate(article.updatedAt) }}
         </p>
         <!-- content author component -->
         <author class="hidden" :author="article.author" />
@@ -77,7 +77,7 @@
         <div class="overlay"></div>
         <div class="mt-16 -mb-3 flex uppercase text-sm">
           <p class="mr-3">
-            {{ formatDate(article.updatedAt) }}
+            {{ $formatDate(article.updatedAt) }}
           </p>
           <span class="mr-3">•</span>
           <p>{{ article.author.name }}</p>
@@ -114,7 +114,7 @@
         <h1 class="font-bold text-4xl">{{ article.title }}</h1>
         <p>{{ article.description }}</p>
         <p class="pb-4">
-          Post last updated: {{ formatDate(article.updatedAt) }}
+          Post last updated: {{ $formatDate(article.updatedAt) }}
         </p>
         <!-- table of contents -->
         <nav class="pb-6">
@@ -186,12 +186,7 @@ export default {
       return getSiteMeta(metaData)
     }
   },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    }
-  },
+
   head() {
     return {
       title: this.article.title,

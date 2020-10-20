@@ -54,7 +54,7 @@
               <h2 class="font-bold">{{ article.title }}</h2>
               <p>{{ article.description }}</p>
               <p class="font-bold text-gray-600 text-sm">
-                {{ formatDate(article.updatedAt) }}
+                {{ $formatDate(article.updatedAt) }}
               </p>
             </div>
           </NuxtLink>
@@ -79,12 +79,6 @@ export default {
     return {
       articles,
       tag
-    }
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
     }
   }
 }

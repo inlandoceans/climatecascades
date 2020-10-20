@@ -12,7 +12,7 @@
             {{ post.title }}
           </h2>
           <span class="uppercase text-white font-bold">
-            {{ formatDate(post.createdAt) }}
+            {{ $formatDate(post.publishDate) }}
           </span>
           <!-- <p class="text-sm font-spectral text-white">
             by {{ post.author.name }}
@@ -33,12 +33,6 @@ export default {
     post: {
       type: Object,
       default: () => {}
-    }
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
     }
   }
 }

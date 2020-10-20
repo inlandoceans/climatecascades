@@ -13,6 +13,14 @@ export default {
    */
   target: 'static',
   /*
+   ** Loading bar
+   ** https://nuxtjs.org/api/configuration-loading/
+   */
+  loading: {
+    color: 'navy',
+    height: '5px'
+  },
+  /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
@@ -53,7 +61,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Spectral&Cormorant+Garamond:wght@600&display=swap'
+          'https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;800;900&family=Spectral&Cormorant+Garamond:wght@600&Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
       }
     ]
   },

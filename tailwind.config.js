@@ -17,8 +17,9 @@ module.exports = {
     },
     fontFamily: {
       spectral: ['Spectral', 'serif'],
-      crimson: ['Crimson Text', 'serif'],
+      crimsonpro: ['Crimson Pro', 'serif'],
       corgar: ['Cormorant Garamond', 'serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
       body: ['Cormorant Garamond', 'serif']
     },
     borderWidth: {
@@ -29,10 +30,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        cyan: '#9cdbff',
-        gunmetal: '#0B191E',
-        pacific: '#23B5D3',
-        gains: '#DFE0E2'
+        darkbg: '#0B191E',
+        darktitle: '#DFE0E2',
+        darkheading: '#23B5D3',
+        darkcontent: '#DFE0E2',
+        darkhighlight: '#DFE0E2'
       },
       spacing: {
         96: '24rem',

@@ -1,17 +1,41 @@
 <template>
-  <div class="grid md:grid-cols-3 row-gap-4 col-gap-2">
-    <div v-for="article of features" :key="article.slug" class="col-span-1">
+  <div class="grid gap-y-8">
+    <div
+      v-for="article of features"
+      :key="article.slug"
+      class="my-4 grid grid-cols-5 gap-4"
+    >
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class="transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md"
+        class="col-span-3"
       >
-        <div class="">
-          <h2 class="font-extrabold text-lg">{{ article.title }}</h2>
-          <p class="text-red-900 text-sm font-spectral">
-            by {{ article.author.name }}
-          </p>
+        <img
+          :src="article.img"
+          :alt="article.alt"
+          class="w-full md:h-48 lg:h-64 object-cover"
+        />
+      </NuxtLink>
+      <NuxtLink
+        :to="{ name: 'post-slug', params: { slug: article.slug } }"
+        class="col-span-2 border-b border-solid border-blue-800"
+      >
+        <div class="px-4">
+          <h2
+            class="text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
+          >
+            {{ article.title }}
+          </h2>
+          <span
+            class="uppercase text-red-900 dark:text-darkhighlight text-sm font-bold"
+          >
+            <!-- {{ formatDate(article.createdAt) }} -->
+          </span>
+          <span class="mx-2 dark:text-darkhighlight">•</span>
+          <span class="text-red-900 text-md dark:text-darkhighlight">
+            By {{ article.author.name }}
+          </span>
 
-          <p class="font-spectral text-sm">
+          <p class="my-2 font-spectral text-md dark:text-darkcontent">
             {{ article.description }}
           </p>
         </div>

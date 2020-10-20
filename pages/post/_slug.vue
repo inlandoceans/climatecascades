@@ -5,7 +5,7 @@
       <div class="py-8 text-center">
         <img :src="article.img" :alt="article.alt" class="" />
 
-        <h1 class="beforeafter text-4xl md:text-6xl font-bold">
+        <h1 class="beforeafter text-6xl font-semibold">
           {{ article.title }}
         </h1>
         <span v-for="(tag, id) in article.tags" :key="id">
@@ -53,7 +53,7 @@
           </ul>
         </nav>
         <!-- content from markdown -->
-        <nuxt-content :document="article" max-w-2xl />
+        <nuxt-content :document="article" class="font-crimsonpro text-lg" />
         <p class="pb-4 font-spectral">
           Post last updated: {{ formatDate(article.updatedAt) }}
         </p>
@@ -75,26 +75,23 @@
           class="absolute h-full w-full object-cover"
         />
         <div class="overlay"></div>
-        <div class="absolute top-32 left-32 text-white">
-          <NuxtLink to="/"><Logo /></NuxtLink>
-          <div class="mt-16 -mb-3 flex uppercase text-sm">
-            <p class="mr-3">
-              {{ formatDate(article.updatedAt) }}
-            </p>
-            <span class="mr-3">•</span>
-            <p>{{ article.author.name }}</p>
-          </div>
-          <h1 class="text-6xl font-bold">{{ article.title }}</h1>
-          <span v-for="(tag, id) in article.tags" :key="id">
-            <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
-              <span
-                class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-              >
-                {{ tags[tag].name }}
-              </span>
-            </NuxtLink>
-          </span>
+        <div class="mt-16 -mb-3 flex uppercase text-sm">
+          <p class="mr-3">
+            {{ formatDate(article.updatedAt) }}
+          </p>
+          <span class="mr-3">•</span>
+          <p>{{ article.author.name }}</p>
         </div>
+        <h1 class="text-6xl font-bold">{{ article.title }}</h1>
+        <span v-for="(tag, id) in article.tags" :key="id">
+          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
+            <span
+              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+            >
+              {{ tags[tag].name }}
+            </span>
+          </NuxtLink>
+        </span>
         <div class="flex absolute top-3rem right-3rem">
           <NuxtLink
             to="/"
@@ -142,7 +139,7 @@
           </ul>
         </nav>
         <!-- content from markdown -->
-        <nuxt-content :document="article" />
+        <nuxt-content :document="article" class="text-md" />
         <!-- content author component -->
         <author :author="article.author" />
         <!-- prevNext component -->
@@ -258,7 +255,6 @@ export default {
 
 .nuxt-content p {
   margin-bottom: 20px;
-  font-family: spectral, serif;
 }
 
 .nuxt-content a {

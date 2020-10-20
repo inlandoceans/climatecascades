@@ -1,19 +1,14 @@
 <template>
   <div class="box-border">
     <HeroPost :post="heroPost" />
+    <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
+      <h2 class="text-4xl font-spectral dark:text-darktitle">Reacts</h2>
 
-    <div class="mx-8">
-      <h2
-        class="text-2xl uppercase font-spectral text-red-800 font-extrabold dark:text-pacific"
-      >
-        Reacts
-      </h2>
       <Articles :articles="articles" />
     </div>
-    <div>
-      <h2 class="text-2xl text-red-800 font-extrabold dark:text-pacific">
-        Features
-      </h2>
+    <div class="box-border bg-red-900 h-16"></div>
+    <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
+      <h2 class="text-4xl font-spectral dark:text-darktitle">Features</h2>
       <Features :features="features" />
     </div>
     <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
@@ -64,7 +59,7 @@ export default {
       .fetch()
     const articles = allArticles
       .filter((article) => article.category === 'react')
-      .slice(0, 9)
+      .slice(0, 6)
     const allFeatures = allArticles.filter(
       (article) => article.category === 'feature'
     )

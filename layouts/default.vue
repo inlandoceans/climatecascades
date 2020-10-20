@@ -1,7 +1,8 @@
 <template>
-  <div class="dark:bg-gunmetal">
+  <div class="dark:bg-darkbg">
     <TheHeader />
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
 

@@ -2,11 +2,13 @@
   <div>
     <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }" class="">
       <div
-        class="heroImage sm:px-8 sm:py-12 md:px-16 md:py-24 opacity-100"
+        class="heroImage sm:px-8 sm:py-12 md:px-16 md:pt-24 pb-48 opacity-100"
         :style="{ backgroundImage: `url(${post.img})` }"
       >
-        <div class="herobox relative z-10 py-4">
-          <h2 class="max-w-lg text-4xl font-bold text-white px-5">
+        <div class="herobox relative z-10 py-4 my-24">
+          <h2
+            class="max-w-lg text-4xl font-semibold text-white dark:text-darktitle px-5"
+          >
             {{ post.title }}
           </h2>
           <span class="uppercase text-white font-bold">
@@ -16,7 +18,7 @@
             by {{ post.author.name }}
           </p> -->
           <p
-            class="max-w-md mx-auto mt-6 mb-4 text-white text-lg font-spectral"
+            class="max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg font-crimsonpro"
           >
             {{ post.description }}
           </p>
@@ -50,7 +52,6 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 0 20px;
   position: relative;
   text-align: center;
   box-sizing: border-box;

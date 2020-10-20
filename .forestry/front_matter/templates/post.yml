@@ -45,4 +45,5 @@ fields:
   name: category
   label: category
 pages:
+- content/articles/date-lines.md
 - content/articles/in-nepal-where-the-rain-falls.md

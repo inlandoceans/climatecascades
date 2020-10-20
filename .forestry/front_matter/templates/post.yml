@@ -65,5 +65,4 @@ fields:
   config:
     use_select: false
 pages:
-- content/articles/a-point-in-time.md
 - content/articles/in-nepal-where-the-rain-falls.md

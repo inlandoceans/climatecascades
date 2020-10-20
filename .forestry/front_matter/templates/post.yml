@@ -8,7 +8,7 @@ fields:
 - type: textarea
   name: description
   label: description
-- name: publish_date
+- name: publishDate
   type: datetime
   label: Publish date
   description: ''
@@ -25,25 +25,26 @@ fields:
 - type: text
   name: alt
   label: alt
-- type: field_group
-  name: author
-  label: author
-  fields:
-  - type: text
-    name: name
-    label: name
-  - type: text
-    name: bio
-    label: bio
-  - type: text
-    name: img
-    label: img
 - type: list
   name: tags
   label: tags
 - type: text
   name: category
   label: category
+- name: author
+  type: select
+  default: Climate Cascades
+  config:
+    required: true
+    options:
+    - David
+    - Climate Cascades
+    source:
+      type: simple
+      section: ''
+      file: 
+      path: ''
+  label: Author
 pages:
 - content/articles/date-lines.md
 - content/articles/in-nepal-where-the-rain-falls.md

@@ -4,33 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: textarea
   name: description
-  label: description
-- name: publishDate
-  type: datetime
-  label: Publish date
-  description: ''
+  label: Description
   config:
-    required: false
-    date_format: MM/DD/YYYY
-    time_format: h:mm A ZZ
-    display_utc: false
-    export_format: MM/DD/YYYY h:mm A ZZ
-  default: now
-- type: file
-  name: img
-  label: img
-- type: text
-  name: alt
-  label: alt
-- type: list
-  name: tags
-  label: tags
-- type: text
-  name: category
-  label: category
+    required: true
+    max: 50
+    min: 20
 - name: author
   type: select
   default: Climate Cascades
@@ -45,6 +28,42 @@ fields:
       file: 
       path: ''
   label: Author
+- name: publishDate
+  type: datetime
+  label: Publish date
+  description: ''
+  config:
+    required: true
+    date_format: MM/DD/YYYY
+    time_format: h:mm A ZZ
+    display_utc: false
+    export_format: MM/DD/YYYY h:mm A ZZ
+  default: now
+- name: category
+  type: select
+  default: reacts
+  config:
+    required: true
+    options:
+    - reacts
+    - feature
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+- type: file
+  name: img
+  label: Cover Image
+- type: text
+  name: alt
+  label: Cover Alt Text
+- type: list
+  name: tags
+  label: Tags
+  config:
+    use_select: false
 pages:
 - content/articles/date-lines.md
 - content/articles/in-nepal-where-the-rain-falls.md

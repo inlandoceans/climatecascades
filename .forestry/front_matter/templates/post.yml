@@ -8,6 +8,17 @@ fields:
 - type: textarea
   name: description
   label: description
+- name: publish_date
+  type: datetime
+  label: Publish date
+  description: ''
+  config:
+    required: false
+    date_format: MM/DD/YYYY
+    time_format: h:mm A ZZ
+    display_utc: false
+    export_format: MM/DD/YYYY h:mm A ZZ
+  default: now
 - type: file
   name: img
   label: img

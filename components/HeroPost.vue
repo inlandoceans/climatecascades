@@ -2,7 +2,7 @@
   <div>
     <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }" class="">
       <div
-        class="heroImage sm:px-8 sm:py-12 md:px-16 md:pt-24 pb-48 opacity-100"
+        class="heroImage sm:px-8 sm:py-4 md:px-16 md:pt-8 md:pb-8 lg:pb-16 opacity-100"
         :style="{ backgroundImage: `url(${post.img})` }"
       >
         <div class="herobox relative z-10 py-4 my-24">

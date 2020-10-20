@@ -1,5 +1,5 @@
 <template>
-  <header class="text-center pt-8">
+  <header class="text-center pt-2">
     <NuxtLink to="/">
       <span class="text-6xl leading-none dark:text-darktitle"> Climate</span>
       <span class="uppercase text-2xl dark:text-darktitle">Cascades</span>

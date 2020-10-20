@@ -14,9 +14,7 @@
           <span class="uppercase text-white dark:text-darktitle font-bold">
             {{ $formatDate(post.publishDate) }}
           </span>
-          <!-- <p class="text-sm font-spectral text-white">
-            by {{ post.author.name }}
-          </p> -->
+          <p class="text-sm font-spectral text-white">by {{ post.author }}</p>
           <p
             class="px-10 max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg font-crimsonpro"
           >

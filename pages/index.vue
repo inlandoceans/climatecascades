@@ -46,6 +46,7 @@
 import HeroPost from '../components/HeroPost'
 import Articles from '../components/Articles'
 import Features from '../components/Features'
+
 export default {
   components: {
     HeroPost,

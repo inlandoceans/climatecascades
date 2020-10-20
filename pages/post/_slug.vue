@@ -2,36 +2,31 @@
   <article>
     <!-- Layout for features -->
     <div v-if="template">
-      <div class="py-8 text-center">
-        <img :src="article.img" :alt="article.alt" class="" />
-
-        <h1 class="beforeafter text-6xl font-semibold">
-          {{ article.title }}
-        </h1>
-        <span v-for="(topic, id) in article.topics" :key="id">
-          <NuxtLink :to="`/topic/${topics[topic].slug}`">
-            <span
-              class="truncate uppercase tracking-wider font-medium text-sm px-2 py-1 rounded mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+      <div>
+        <div
+          class="heroImage opacity-100 max-h-screen"
+          :style="{ backgroundImage: `url(${article.img})` }"
+        >
+          <NavBarFeature />
+          <div class="herobox relative z-10 py-4 my-64">
+            <h2
+              class="max-w-lg text-4xl font-semibold text-white dark:text-darktitle px-5"
             >
-              {{ topics[topic].name }}
+              {{ article.title }}
+            </h2>
+            <span class="uppercase text-white dark:text-darktitle font-bold">
+              {{ $formatDate(article.publishDate) }}
             </span>
-          </NuxtLink>
-        </span>
-        <p class="font-spectral py-2 text-lg">{{ article.description }}</p>
-
-        <div class="text-center mt-8 uppercase text-sm text-red-800">
-          <span class="mr-3">
-            {{ $formatDate(article.updatedAt) }}
-          </span>
-          <span class="mr-3">•</span>
-          <NuxtLink :to="`/author/${article.author.name}`">
-            <span>{{ article.author.name }}</span>
-          </NuxtLink>
+            <span class="text-sm font-spectral text-white">
+              by {{ article.author }}
+            </span>
+          </div>
         </div>
       </div>
-      <div class="max-w-2xl mx-auto h-full px-6">
+
+      <div class="max-w-xl mx-auto h-full px-6 my-4">
         <!-- table of contents -->
-        <nav class="hidden pb-6">
+        <!-- <nav class="hidden pb-6">
           <ul>
             <li
               v-for="link of article.toc"
@@ -51,39 +46,38 @@
               >
             </li>
           </ul>
-        </nav>
+        </nav> -->
+        <p
+          class="mb-4 dark:text-darkcontent text-lg font-crimsonpro font-semibold"
+        >
+          {{ article.description }}
+        </p>
         <!-- content from markdown -->
         <nuxt-content :document="article" class="font-crimsonpro text-lg" />
-        <p class="pb-4 font-spectral">
-          Post last updated: {{ $formatDate(article.updatedAt) }}
-        </p>
-        <!-- content author component -->
-        <author class="hidden" :author="article.author" />
+
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />
       </div>
     </div>
     <!-- Layout for non features -->
-    <div
-      v-if="!template"
-      class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
-    >
-      <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-        <img
-          :src="article.img"
-          :alt="article.alt"
-          class="absolute h-full w-full object-cover"
-        />
-        <div class="overlay"></div>
-        <div class="mt-16 -mb-3 flex uppercase text-sm">
-          <p class="mr-3">
-            {{ $formatDate(article.updatedAt) }}
-          </p>
-          <span class="mr-3">•</span>
-          <p>{{ article.author.name }}</p>
+    <div v-if="!template">
+      <TheHeader />
+      <div class="max-w-lg items-center mx-auto">
+        <div class="text-center">
+          <img :src="article.img" :alt="article.alt" class="" />
+          <h1 class="mt-4 mb-2 text-2xl font-bold">{{ article.title }}</h1>
+          <span
+            class="uppercase text-red-900 dark:text-darkhighlight text-sm font-bold"
+          >
+            {{ $formatDate(article.publishDate) }}
+          </span>
+          <span class="mx-2 dark:text-darkhighlight">•</span>
+          <span class="text-red-900 text-md dark:text-darkhighlight">
+            By {{ article.author.name }}
+          </span>
+          <p class="text-lg font-semibold mb-4">{{ article.description }}</p>
         </div>
-        <h1 class="text-6xl font-bold">{{ article.title }}</h1>
-        <span v-for="(topic, id) in article.topics" :key="id">
+        <!-- <span v-for="(topic, id) in article.topics" :key="id">
           <NuxtLink :to="`/blog/topic/${topics[topic].slug}`">
             <span
               class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
@@ -91,57 +85,11 @@
               {{ topics[topic].name }}
             </span>
           </NuxtLink>
-        </span>
-        <div class="flex absolute top-3rem right-3rem">
-          <NuxtLink
-            to="/"
-            class="mr-8 self-center text-white font-bold hover:underline"
-          >
-            All articles
-          </NuxtLink>
-          <a
-            href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-            class="mr-8 self-center text-white font-bold hover:underline"
-          >
-            Tutorial
-          </a>
-          <AppSearchInput />
-        </div>
-      </div>
-      <div
-        class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
-      >
-        <h1 class="font-bold text-4xl">{{ article.title }}</h1>
-        <p>{{ article.description }}</p>
-        <p class="pb-4">
-          Post last updated: {{ $formatDate(article.updatedAt) }}
-        </p>
-        <!-- table of contents -->
-        <nav class="pb-6">
-          <ul>
-            <li
-              v-for="link of article.toc"
-              :key="link.id"
-              :class="{
-                'font-semibold': link.depth === 2
-              }"
-            >
-              <nuxtLink
-                :to="`#${link.id}`"
-                class="hover:underline"
-                :class="{
-                  'py-2': link.depth === 2,
-                  'ml-2 pb-2': link.depth === 3
-                }"
-                >{{ link.text }}</nuxtLink
-              >
-            </li>
-          </ul>
-        </nav>
+        </span> -->
+
         <!-- content from markdown -->
         <nuxt-content :document="article" class="text-md" />
-        <!-- content author component -->
-        <author :author="article.author" />
+
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />
       </div>
@@ -153,6 +101,7 @@
 import getSiteMeta from '@/utils/getSiteMeta'
 
 export default {
+  layout: 'feature',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const topicsList = await $content('topics')
@@ -165,7 +114,7 @@ export default {
     )
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('publishDate', 'asc')
       .surround(params.slug)
       .fetch()
     const template = article.category === 'feature'
@@ -227,28 +176,28 @@ export default {
 }
 </script>
 <style>
-.beforeafter {
-  border: 1px solid red;
+.heroImage {
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
 }
-
-.beforeafter::before {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  bottom: -6px;
-  left: -6px;
-  border: 3px solid red;
-}
-.beforeafter::after {
-  width: 1px;
-  height: 400px;
-  content: '\0020';
+.heroImage::after {
+  content: '';
   display: block;
-  pointer-events: none;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  background: red;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .nuxt-content p {
@@ -256,26 +205,21 @@ export default {
 }
 
 .nuxt-content a {
-  color: red;
+  color: #9b2c2c;
+  text-decoration: underline;
 }
 
 .nuxt-content a:hover {
-  color: aqua;
+  color: #742a2a;
+  text-decoration: underline;
 }
 
 .nuxt-content h2 {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24;
 }
 .nuxt-content h3 {
   font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+  font-size: 20px;
 }
 </style>

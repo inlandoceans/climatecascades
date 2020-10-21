@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between dark:text-darkcontent">
     <NuxtLink
       v-if="prev"
       :to="{ name: 'post-slug', params: { slug: prev.slug } }"

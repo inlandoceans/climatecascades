@@ -53,16 +53,20 @@
           {{ article.description }}
         </p>
         <!-- content from markdown -->
-        <nuxt-content :document="article" class="font-crimsonpro text-lg" />
+        <nuxt-content
+          :document="article"
+          class="font-crimsonpro text-lg dark:text-darkcontent"
+        />
 
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />
       </div>
     </div>
+
     <!-- Layout for non features -->
     <div v-if="!template">
       <TheHeader />
-      <div class="max-w-lg items-center mx-auto">
+      <div class="max-w-lg items-center mx-auto dark:text-darkcontent">
         <div class="text-center">
           <img :src="article.img" :alt="article.alt" class="" />
           <h1 class="mt-4 mb-2 text-2xl font-bold">{{ article.title }}</h1>

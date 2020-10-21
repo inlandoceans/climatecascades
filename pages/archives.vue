@@ -1,42 +1,80 @@
 <template>
-  <div>
-    <h1 class="font-bold text-lg text-red-900">Features</h1>
+  <div class="mx-auto h-screen-full">
+    <div class="overflow-hidden px-4 col-span-1">
+      <table class="table-auto mx-auto">
+        <thead>
+          <tr>
+            <h1
+              class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
+            >
+              Features
+            </h1>
+          </tr>
+          <tr></tr>
+        </thead>
+        <tbody>
+          <tr v-for="article of features" :key="article.slug">
+            <td class="px-4">
+              <p class="dark:text-darkcontent">
+                {{ $formatDate(article.publishDate) }}
+              </p>
+            </td>
+            <td class="pl-4 px-6">
+              <NuxtLink
+                :to="{ name: 'post-slug', params: { slug: article.slug } }"
+              >
+                <span class="dark:text-darkcontent">{{ article.title }}</span>
+              </NuxtLink>
 
-    <tbody class="ml-8">
-      <tr v-for="article of features" :key="article.slug" class="flex">
-        <NuxtLink
-          :to="{ name: 'post-slug', params: { slug: article.slug } }"
-          class="inline-block"
-        >
-          <td class="">
-            <p>{{ $formatDate(article.publishDate) }}</p>
-          </td>
-          <td class="">
-            <p>{{ article.title }}</p>
-          </td>
-          <td>
-            <p class="text-sm font-spectral text-red-900">
-              by {{ article.author.name }}
-            </p>
-          </td>
-        </NuxtLink>
-      </tr>
-    </tbody>
-    <h1 class="font-bold text-lg text-red-900">Articles</h1>
-    <ul class="ml-8">
-      <li v-for="article of articles" :key="article.slug" class="flex">
-        <NuxtLink
-          :to="{ name: 'post-slug', params: { slug: article.slug } }"
-          class=""
-        >
-          <span class="mr-3"> {{ $formatDate(article.publishDate) }}</span>
-          <span class="">{{ article.title }}</span>
-          <span class="text-sm font-spectral text-red-900">
-            by {{ article.author.name }}
-          </span>
-        </NuxtLink>
-      </li>
-    </ul>
+              <span
+                class="text-sm font-spectral text-red-900 dark:text-darkheading"
+              >
+                by
+                {{ article.author.name }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="overflow-hidden px-4 col-span-1 mt-4">
+      <table class="table-auto mx-auto">
+        <thead>
+          <tr>
+            <h1
+              class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
+            >
+              Articles
+            </h1>
+          </tr>
+          <tr></tr>
+        </thead>
+        <tbody>
+          <tr v-for="article of articles" :key="article.slug">
+            <td class="px-4">
+              <p class="dark:text-darkcontent">
+                {{ $formatDate(article.publishDate) }}
+              </p>
+            </td>
+            <td class="pl-4 px-6">
+              <NuxtLink
+                :to="{ name: 'post-slug', params: { slug: article.slug } }"
+              >
+                <span class="dark:text-darkcontent">{{ article.title }}</span>
+              </NuxtLink>
+
+              <span
+                class="text-sm font-spectral text-red-900 dark:text-darkheading"
+              >
+                by
+                {{ article.author.name }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 

@@ -20,6 +20,7 @@ export default {
     color: 'navy',
     height: '5px'
   },
+
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head

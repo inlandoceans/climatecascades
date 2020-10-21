@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-2xl dark:text-darktitle">
+  <div class="mx-auto px-8 max-w-2xl dark:text-darktitle">
     <h1 class="text-4xl">About</h1>
     <img src="/tempbars.png" />
     <p class="text-sm uppercase">Average temperature anomalies, by NOAA</p>

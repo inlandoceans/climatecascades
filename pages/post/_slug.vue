@@ -24,39 +24,12 @@
         </div>
       </div>
 
-      <div class="max-w-xl mx-auto h-full px-6 my-4">
-        <!-- table of contents -->
-        <!-- <nav class="hidden pb-6">
-          <ul>
-            <li
-              v-for="link of article.toc"
-              :key="link.id"
-              :class="{
-                'font-semibold': link.depth === 2
-              }"
-            >
-              <nuxtLink
-                :to="`#${link.id}`"
-                class="hover:underline"
-                :class="{
-                  'py-2': link.depth === 2,
-                  'ml-2 pb-2': link.depth === 3
-                }"
-                >{{ link.text }}</nuxtLink
-              >
-            </li>
-          </ul>
-        </nav> -->
-        <p
-          class="mb-4 dark:text-darkcontent text-lg font-crimsonpro font-semibold"
-        >
+      <div class="max-w-4xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
+        <p class="l mb-4 dark:text-darkcontent font-crimsonpro font-semibold">
           {{ article.description }}
         </p>
         <!-- content from markdown -->
-        <nuxt-content
-          :document="article"
-          class="font-crimsonpro text-lg dark:text-darkcontent"
-        />
+        <nuxt-content :document="article" class="dark:text-darkcontent" />
 
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />

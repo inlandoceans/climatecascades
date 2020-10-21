@@ -52,21 +52,74 @@
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
       <ul
-        class="mx-auto font-spectral font-semibold text-center uppercase text-red-900 dark:text-darkheading"
+        class="mx-auto my-8 px-8 font-spectral font-semibold text-left uppercase text-red-900 dark:text-darkheading"
       >
+        <li><AppSearchInput /></li>
+        <li class="pt-8 border-b border-blue-900" @click="isOpen = false">
+          Articles
+        </li>
         <NuxtLink to="/topics">
-          <li class="" @click="isOpen = false">Topics</li></NuxtLink
+          <li class="pl-4" @click="isOpen = false">Reacts</li></NuxtLink
         >
-        <li class="mx-3">•</li>
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Features</li></NuxtLink
+        >
+        <li class="pt-4 border-b border-blue-900" @click="isOpen = false">
+          Topics
+        </li>
+        <NuxtLink to="/topics">
+          <li class="pl-4" @click="isOpen = false">Geopolitics</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Technology</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Mitigation</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Adaptation</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Disasters</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Terrestrial</li></NuxtLink
+        >
+        <NuxtLink to="/topics"
+          ><li class="pl-4" @click="isOpen = false">Oceans</li></NuxtLink
+        >
 
-        <NuxtLink to="/regions"> <li class="">Regions</li> </NuxtLink>
-        <li class="mx-3">•</li>
+        <NuxtLink to="/regions">
+          <li class="pt-4 border-b border-blue-900" @click="isOpen = false">
+            Regions
+          </li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">North America</li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">South America</li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">Europe</li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">Africa</li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">Asia</li>
+        </NuxtLink>
+        <NuxtLink to="/regions">
+          <li class="pl-4" @click="isOpen = false">Antarctic</li>
+        </NuxtLink>
+        <NuxtLink to="/archives">
+          <li class="pl-4" @click="isOpen = false">Arctic</li></NuxtLink
+        >
 
-        <NuxtLink to="/archives"> <li class="">Archives</li></NuxtLink>
-        <li class="mx-3">•</li>
-
+        <NuxtLink to="/archives">
+          <li class="pt-4 border-t border-blue-900">Archives</li></NuxtLink
+        >
         <NuxtLink to="/about"> <li class="">About</li></NuxtLink>
-        <li class="mx-3">•</li>
       </ul>
       <!-- <span
         class="flex w-full items-center p-4 border-b"

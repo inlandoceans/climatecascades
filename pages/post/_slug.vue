@@ -17,15 +17,13 @@
             <span class="uppercase text-white dark:text-darktitle font-bold">
               {{ $formatDate(article.publishDate) }}
             </span>
-            <span class="text-sm font-spectral text-white">
-              by {{ article.author }}
-            </span>
+            <span class="text-xl text-white"> by {{ article.author }} </span>
           </div>
         </div>
       </div>
 
       <div class="max-w-4xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
-        <p class="l mb-4 dark:text-darkcontent font-crimsonpro font-semibold">
+        <p class="l mb-4 dark:text-darkcontent font-semibold">
           {{ article.description }}
         </p>
         <!-- content from markdown -->
@@ -49,7 +47,7 @@
             {{ $formatDate(article.publishDate) }}
           </span>
           <span class="mx-2 dark:text-darkhighlight">•</span>
-          <span class="text-red-900 text-md dark:text-darkhighlight">
+          <span class="text-red-900 text-lg dark:text-darkhighlight">
             By {{ article.author.name }}
           </span>
           <p class="text-lg font-semibold mb-4">{{ article.description }}</p>
@@ -65,7 +63,7 @@
         </span> -->
 
         <!-- content from markdown -->
-        <nuxt-content :document="article" class="text-md" />
+        <nuxt-content :document="article" class="text-lg sm:text-xl" />
 
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />

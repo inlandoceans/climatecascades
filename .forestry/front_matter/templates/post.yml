@@ -60,8 +60,8 @@ fields:
   name: alt
   label: Cover Alt Text
 - type: list
-  name: tags
-  label: Tags
+  name: topics
+  label: Topics
   config:
     use_select: false
 pages:

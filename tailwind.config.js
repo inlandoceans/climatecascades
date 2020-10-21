@@ -16,10 +16,8 @@ module.exports = {
       xxlmax: { max: '1350px' }
     },
     fontFamily: {
-      spectral: ['Spectral', 'serif'],
       crimsonpro: ['Crimson Pro', 'serif'],
       corgar: ['Cormorant Garamond', 'serif'],
-      montserrat: ['Montserrat', 'sans-serif'],
       body: ['Cormorant Garamond', 'serif']
     },
     borderWidth: {

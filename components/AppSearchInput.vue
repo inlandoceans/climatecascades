@@ -5,7 +5,7 @@
       type="search"
       autocomplete="off"
       placeholder="Search Articles"
-      class="block w-full pl-10 pr-3 py-2 truncate leading-5 placeholder-gray-500 border border-gray-500 text-gray-700 focus:border-gray-300 rounded-md focus:outline-none focus:bg-white bg-white"
+      class="block w-full pl-4 pr-3 py-4 truncate leading-5 placeholder-gray-500 border border-gray-500 text-gray-700 focus:border-gray-300 rounded-sm focus:outline-none focus:bg-white bg-white"
     />
     <ul
       v-if="articles.length"
@@ -14,7 +14,7 @@
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink
           :to="{ name: 'post-slug', params: { slug: article.slug } }"
-          class="flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150 text-green-500 hover:text-black"
+          class="flex px-2 py-2 items-center leading-5 transition ease-in-out duration-150 hover:text-black"
         >
           {{ article.title }}
         </NuxtLink>

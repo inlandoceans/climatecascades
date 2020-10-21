@@ -46,12 +46,12 @@
       class="transform top-0 right-0 w-64 bg-white dark:bg-darkbg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
+      <AppSearchInput class="mt-8 my-2 px-2 text-md normal-case text-red-900" />
       <ul
-        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-red-900 dark:text-darkheading"
+        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading"
       >
-        <li><AppSearchInput /></li>
         <li
-          class="mt-4 border-b border-blue-900 hover:bg-gray-100"
+          class="px-2 mx-2 mt-4 border-b border-blue-900 hover:bg-gray-100"
           @click="isOpen = false"
         >
           Articles
@@ -62,7 +62,9 @@
           </li></NuxtLink
         >
         <NuxtLink to="/topics"
-          ><li class="pl-4" @click="isOpen = false">Features</li></NuxtLink
+          ><li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
+            Features
+          </li></NuxtLink
         >
         <li
           class="mt-4 border-b border-blue-900 hover:bg-gray-100"

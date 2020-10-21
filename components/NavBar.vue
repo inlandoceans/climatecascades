@@ -46,6 +46,13 @@
       class="transform top-0 right-0 w-64 bg-white dark:bg-darkbg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
+      <h2 class="mt-6">
+        <span class="text-4xl">Climate</span>
+        <span class="uppercase text-lg">Cascades</span>
+      </h2>
+      <NuxtLink to="/">
+        <img src="/logo.png" alt="logo" class="pl-6 pr-6 object-contain" />
+      </NuxtLink>
       <AppSearchInput class="mt-8 my-2 px-2 text-md normal-case text-red-900" />
       <ul
         class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading"

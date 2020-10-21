@@ -1,7 +1,7 @@
 <template>
   <nav class="">
     <button
-      class="z-10 absolute right-0 top-0 mr-8 mt-12"
+      class="z-10 absolute right-0 top-0 mr-4 mt-6 md:mr-8 md:mt-12"
       aria-label="Open Menu"
       @click="drawer"
     >

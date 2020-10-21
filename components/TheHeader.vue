@@ -1,19 +1,27 @@
 <template>
   <header class="text-center items-center pt-2">
     <NuxtLink to="/">
-      <span class="text-6xl leading-none dark:text-darktitle"> Climate</span>
-      <span class="uppercase text-2xl dark:text-darktitle">Cascades</span>
+      <span class="text-4xl md:text-6xl leading-none dark:text-darktitle"
+        >Climate</span
+      >
+      <span class="text-xl md:text-2xl uppercase dark:text-darktitle"
+        >Cascades</span
+      >
     </NuxtLink>
     <NavBar />
 
     <NuxtLink to="/">
-      <img src="/logo.png" alt="logo" class="text-center mx-auto mb-4" />
+      <img
+        src="/logo.png"
+        alt="logo"
+        class="text-center pl-16 pr-16 mx-auto mb-4"
+      />
     </NuxtLink>
     <div>
       <!-- <AppSearchInput class="ml-8 items-center" /> -->
     </div>
     <nav
-      class="flex mx-auto text-center my-4 py-4 border-t border-solid border-blue-800 dark:border-white"
+      class="hidden md:flex mx-auto text-center my-4 py-4 border-t border-solid border-blue-800 dark:border-white"
     >
       <ul
         class="mx-auto flex font-crimsonpro text-lg font-semibold text-center uppercase text-red-900 dark:text-darkheading"

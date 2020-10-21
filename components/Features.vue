@@ -7,7 +7,7 @@
     >
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class="col-span-3"
+        class="col-span-5 md:col-span-3"
       >
         <img
           :src="article.img"
@@ -17,7 +17,7 @@
       </NuxtLink>
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class="col-span-2 border-b border-solid border-blue-800"
+        class="col-span-5 md:col-span-2 border-b border-solid border-blue-800"
       >
         <div class="px-4">
           <h2

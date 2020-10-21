@@ -1,34 +1,32 @@
 <template>
-  <div class="grid md:grid-cols-3 gap-x-12 gap-y-4">
+  <div class="grid md:grid-cols-3 gap-x-12 gap-y-8">
     <div
       v-for="article of articles"
       :key="article.slug"
-      class="my-4 col-span-1"
+      class="col-span-3 md:col-span-1 grid grid-cols-3 gap-2 md:my-4 md:block"
     >
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class=""
+        class="col-span-1"
       >
         <img
           :src="article.img"
           :alt="article.alt"
-          class="h-48 object-cover w-full"
+          class="object-cover w-full h-full md:h-48 md:block"
         />
       </NuxtLink>
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class=""
+        class="col-span-2"
       >
-        <div class="">
+        <div class="md:block">
           <span v-for="topic in article.topics" :key="topic">
-            <span
-              class="truncate font-spectral lowercase text-sm text-gray-600 my-4"
-            >
+            <span class="truncate lowercase text-sm text-gray-600 my-4">
               {{ topic }}
             </span>
           </span>
           <h2
-            class="text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
+            class="text-xl md:text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
           >
             {{ article.title }}
           </h2>

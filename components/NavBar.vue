@@ -58,7 +58,7 @@
         class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading"
       >
         <li
-          class="px-2 mx-2 mt-4 border-b border-blue-900 hover:bg-gray-100"
+          class="mt-4 border-b border-blue-900 hover:bg-gray-100"
           @click="isOpen = false"
         >
           Articles

@@ -67,15 +67,21 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .where({
-        'author.name': {
+        author: {
           $regex: [params.author, 'i']
         }
       })
       .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
+    const author = await $content('authors', params.slug).where({
+      name: {
+        $regex: [params.author, 'i']
+      }
+    })
     return {
-      articles
+      articles,
+      author
     }
   }
 }

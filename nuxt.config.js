@@ -1,4 +1,5 @@
 import getSiteMeta from './utils/getSiteMeta'
+import getRoutes from './utils/getRoutes'
 
 const meta = getSiteMeta()
 
@@ -92,7 +93,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // Doc: https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/
     '@nuxtjs/color-mode',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    '@nuxtjs/sitemap'
   ],
   purgeCSS: {
     whitelist: ['dark-mode', 'bg-mayas-green-dark']
@@ -120,5 +122,11 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    routes() {
+      return getRoutes()
+    }
+  }
 }

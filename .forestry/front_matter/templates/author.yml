@@ -13,3 +13,5 @@ fields:
 - type: textarea
   name: img
   label: Picture
+pages:
+- content/authors/milanbio.md

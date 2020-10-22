@@ -2,6 +2,8 @@
 name: Milan
 description: Who, What, Where, Why and How
 img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
+title: Milan Ismangil
+
 ---
 Hello, my name is Milan Ismangil!
 

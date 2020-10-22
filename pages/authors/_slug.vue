@@ -1,5 +1,5 @@
 <template>
-  <div>hi</div>
+  <div>hi bby</div>
   <!-- <div
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
@@ -64,26 +64,26 @@
 </template>
 
 <script>
-export default {
-  async asyncData({ $content, params }) {
-    const articles = await $content('articles', params.slug)
-      .where({
-        author: {
-          $regex: [params.author, 'i']
-        }
-      })
-      .without('body')
-      .sortBy('createdAt', 'asc')
-      .fetch()
-    const author = await $content('authors', params.slug).where({
-      name: {
-        $regex: [params.author, 'i']
-      }
-    })
-    return {
-      articles,
-      author
-    }
-  }
-}
+// export default {
+//   async asyncData({ $content, params }) {
+//     const articles = await $content('articles', params.slug)
+//       .where({
+//         author: {
+//           $regex: [params.author, 'i']
+//         }
+//       })
+//       .without('body')
+//       .sortBy('createdAt', 'asc')
+//       .fetch()
+//     const author = await $content('authors', params.slug).where({
+//       name: {
+//         $regex: [params.author, 'i']
+//       }
+//     })
+//     return {
+//       articles,
+//       author
+//     }
+//   }
+// }
 </script>

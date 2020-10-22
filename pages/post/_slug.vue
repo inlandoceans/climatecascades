@@ -9,7 +9,7 @@
         >
           <div class="pt-16 mt-16 text-center z-10">
             <NuxtLink to="/">
-              <span class="text-6xl leading-none text-white"> Climate</span>
+              <span class="text-6xl leading-none text-white">Climate</span>
               <span class="uppercase text-2xl text-white">Cascades</span>
             </NuxtLink>
           </div>
@@ -23,6 +23,7 @@
             <span class="uppercase text-white dark:text-darktitle font-bold">
               {{ $formatDate(article.publishDate) }}
             </span>
+
             <span class="text-xl text-white"> by {{ article.author }} </span>
           </div>
         </div>
@@ -99,12 +100,15 @@ export default {
       .surround(params.slug)
       .fetch()
     const template = article.category === 'feature'
+    const authorLink = article.author.toLowerCase().replace(/\s/g, '-')
+
     return {
       article,
       topics,
       prev,
       next,
-      template
+      template,
+      authorLink
     }
   },
   computed: {

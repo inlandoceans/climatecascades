@@ -1,4 +1,18 @@
 ---
 label: Authors
 hide_body: true
-fields: []
+fields:
+- name: authors
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Climate Cascades
+    - David Ismangil
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Authors

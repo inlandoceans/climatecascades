@@ -82,7 +82,7 @@
         >
           Topics
         </li>
-        <NuxtLink to="/post/topic/nuxtjs">
+        <!-- <NuxtLink to="/post/topic/nuxtjs">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Geopolitics
           </li></NuxtLink
@@ -116,7 +116,7 @@
           ><li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Oceans
           </li></NuxtLink
-        >
+        > -->
 
         <NuxtLink to="/regions">
           <li

@@ -22,5 +22,3 @@ Pioneering excavations within the Sacred Garden of Lumbini, Nepal, a UNESCO Worl
 “Very little is known about the life of the Buddha, except through textual sources and oral tradition,” said archaeologist Professor Robin Coningham of Durham University, U.K., who co-led the investigation. Some scholars, he said, have maintained that the Buddha was born in the third century B.C. “We thought ‘why not go back to archaeology to try to answer some of the questions about his birth, “Coningham said. “Now, for the first time, we have an archaeological sequence at Lumbini that shows a building there as early as the sixth century B.C.”
 
 The archaeological investigation was funded by the Government of Japan in partnership with the Government of Nepal under a UNESCO project aimed at strengthening the conservation and management of Lumbini The research was also supported by Durham and Stirling Universities in the UK and the National Geographic Society’s Global Exploration Fund.
-
-    <h2><b>let's get it on</b></h2>

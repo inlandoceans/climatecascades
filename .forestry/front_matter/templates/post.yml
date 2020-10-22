@@ -23,9 +23,9 @@ fields:
     - David
     - Climate Cascades
     source:
-      type: pages
+      type: documents
       section: authors
-      file: 
+      file: content/authors/authors.md
       path: ''
   label: Author
 - name: publishDate

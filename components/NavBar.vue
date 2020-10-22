@@ -66,12 +66,12 @@
         >
           Articles
         </li>
-        <NuxtLink to="/topics">
+        <NuxtLink to="/#reacts">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Reacts
           </li></NuxtLink
         >
-        <NuxtLink to="/topics"
+        <NuxtLink to="/#features"
           ><li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Features
           </li></NuxtLink
@@ -82,7 +82,7 @@
         >
           Topics
         </li>
-        <NuxtLink to="/topics">
+        <NuxtLink to="/post/topic/nuxtjs">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Geopolitics
           </li></NuxtLink

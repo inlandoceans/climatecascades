@@ -6,8 +6,9 @@
         <NuxtLink to="/reacts">
           <h2 class="postList text-4xl dark:text-darktitle">Reacts</h2>
         </NuxtLink>
-        <NuxtLink to="/reacts">
+        <NuxtLink to="/archives/#reacts">
           <h3
+            id="reacts"
             class="uppercase mr-6 border-b-2 border-solid font-semibold border-red-800"
           >
             All Reacts
@@ -22,8 +23,9 @@
         <NuxtLink to="/features">
           <h2 class="featureList text-4xl dark:text-darktitle">Features</h2>
         </NuxtLink>
-        <NuxtLink to="/features">
+        <NuxtLink to="/archives/#features">
           <h3
+            id="features"
             class="uppercase mr-6 border-b-2 border-solid font-semibold border-blue-800"
           >
             All Features

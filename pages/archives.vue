@@ -5,6 +5,7 @@
         <thead>
           <tr>
             <h1
+              id="features"
               class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
             >
               Features
@@ -39,9 +40,10 @@
         <thead>
           <tr>
             <h1
+              id="reacts"
               class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
             >
-              Articles
+              Reacts
             </h1>
           </tr>
           <tr></tr>

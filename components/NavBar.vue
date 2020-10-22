@@ -45,7 +45,7 @@
       </div>
     </transition>
     <aside
-      class="transform top-0 right-0 w-64 bg-white dark:bg-darkbg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
+      class="transform top-0 right-0 w-64 bg-white dark:bg-darkbg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-50"
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
       <NuxtLink to="/">
@@ -58,7 +58,7 @@
       </NuxtLink>
       <AppSearchInput class="mt-8 my-2 px-2 text-md normal-case text-red-900" />
       <ul
-        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading"
+        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading z-50"
       >
         <li
           class="mt-4 border-b border-blue-900 hover:bg-gray-100"
@@ -126,36 +126,38 @@
             Regions
           </li>
         </NuxtLink>
-        <NuxtLink to="/regions">
+        <NuxtLink to="/region/global">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Global</li>
+        </NuxtLink>
+        <NuxtLink to="/region/Africa">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Africa</li>
+        </NuxtLink>
+        <NuxtLink to="/region/arctics">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
+            Arctics
+          </li>
+        </NuxtLink>
+        <NuxtLink to="/region/asia">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Asia</li>
+        </NuxtLink>
+        <NuxtLink to="/region/europe">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Europe</li>
+        </NuxtLink>
+        <NuxtLink to="/region/n-america">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             North America
           </li>
         </NuxtLink>
-        <NuxtLink to="/regions">
+        <NuxtLink to="/region/oceania">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
-            South America
-          </li>
-        </NuxtLink>
-        <NuxtLink to="/regions">
-          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Europe</li>
-        </NuxtLink>
-        <NuxtLink to="/regions">
-          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Africa</li>
-        </NuxtLink>
-        <NuxtLink to="/regions">
-          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Asia</li>
-        </NuxtLink>
-        <NuxtLink to="/regions">
-          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
-            Antarctic
-          </li>
-        </NuxtLink>
-        <NuxtLink to="/archives">
-          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
-            Arctic
+            Oceania
           </li></NuxtLink
         >
-
+        <NuxtLink to="/region/s-america">
+          <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
+            South America
+          </li></NuxtLink
+        >
         <NuxtLink to="/archives">
           <li class="mt-4 border-t border-blue-900 hover:bg-gray-100">
             Archives
@@ -176,6 +178,7 @@ export default {
       isOpen: false
     }
   },
+
   watch: {
     isOpen: {
       immediate: true,

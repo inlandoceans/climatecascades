@@ -1,16 +1,19 @@
 ---
-title: In Nepal where the rain falls
-publishDate: 2020/10/19 1:23 PM +0000
-description: Exploring small bodies in the solar system provides clues to origins
-  has now become an essential path towards long term survival. How can humanity approach
-  these new frontiers?
-img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603209999/climatecascades/nepal2_jvoyzm.jpg
-alt: ''
 author: David
-topics: []
+publishDate: 2020/10/19 1:23 PM +0000
 category: feature
-tags: []
-
+title: In Nepal where the rain falls
+description: Exploring small bodies in the solar system provides clues to origins
+  has now become an essential path towards long term survival.
+img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603209999/climatecascades/nepal2_jvoyzm.jpg
+alt: Mountains on the rise
+topics:
+- mountains,
+- oceans,
+- mitigation
+regions:
+- Global
+- Asia
 ---
 ## Cosmic origins
 

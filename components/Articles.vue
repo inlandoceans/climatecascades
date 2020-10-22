@@ -26,7 +26,7 @@
             </span>
           </span>
           <h2
-            class="text-xl md:text-2xl font-crimsonpro font-semibold text-blue-900 hover:text-blue-700 dark:text-darkheading"
+            class="text-xl md:text-2xl font-semibold text-blue-900 hover:text-blue-700 dark:text-darkheading"
           >
             {{ article.title }}
           </h2>
@@ -40,7 +40,7 @@
             By {{ article.author.name }}
           </span>
 
-          <p class="my-2 font-spectral text-md dark:text-darkcontent">
+          <p class="my-2 text-md dark:text-darkcontent">
             {{ article.description }}
           </p>
         </div>

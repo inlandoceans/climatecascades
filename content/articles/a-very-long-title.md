@@ -11,7 +11,7 @@ topics:
 - oceans,
 - mitigation
 regions:
-- Global,
+- Global
 - Asia
 
 ---

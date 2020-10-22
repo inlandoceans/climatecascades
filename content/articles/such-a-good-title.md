@@ -11,6 +11,8 @@ author:
 topics: 
   - web development
 category: react
+regions: 
+- Europe
 ---
 ## This article is all about Lorem Ipsum
 

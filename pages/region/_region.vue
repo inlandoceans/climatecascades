@@ -2,14 +2,14 @@
   <div class="px-8 pt-4">
     <div class="text-center">
       <h1 class="text-4xl font-bold">
-        {{ topic.name }}
+        {{ region.name }}
       </h1>
-      <p class="">{{ topic.description }}</p>
+      <p class="">{{ region.description }}</p>
 
       <nuxt-content :document="region" />
     </div>
     <h3 class="border-b-2 border-solid border-blue-800">
-      Features tagged {{ topic.name }}:
+      Features tagged {{ region.name }}:
     </h3>
     <div class="grid md:grid-cols-3 gap-x-12 gap-y-8">
       <div
@@ -60,7 +60,7 @@
       </div>
     </div>
     <h3 class="border-b-2 border-solid border-blue-800">
-      Reacts tagged {{ topic.name }}:
+      Reacts tagged {{ region.name }}:
     </h3>
     <div class="grid md:grid-cols-3 gap-x-12 gap-y-8">
       <div
@@ -116,13 +116,14 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const topics = await $content('topics')
-      .where({ slug: { $contains: params.topic } })
+    const regions = await $content('regions')
+      .where({ slug: { $contains: params.region } })
       .limit(1)
       .fetch()
-    const topic = topics.length > 0 ? topics[0] : {}
+    const region = regions.length > 0 ? regions[0] : {}
+
     const allArticles = await $content('articles', params.slug)
-      .where({ topics: { $contains: topic.name } })
+      .where({ regions: { $contains: region.name } })
       .sortBy('publishDate', 'desc')
       .fetch()
 
@@ -134,9 +135,10 @@ export default {
       (article) => article.category === 'feature'
     )
     return {
+      region,
+      regions,
       articles,
-      features,
-      topic
+      features
     }
   }
 }

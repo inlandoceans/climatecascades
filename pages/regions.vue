@@ -7,7 +7,7 @@
         :key="region.slug"
         class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
       >
-        <NuxtLink :to="`/post/region/${region.slug}`" class="">
+        <NuxtLink :to="`/region/${region.slug}`" class="">
           <p class="font-bold text-gray-600 uppercase tracking-wider text-ss">
             {{ region.name }}
           </p>

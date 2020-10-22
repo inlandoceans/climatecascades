@@ -2,18 +2,17 @@
 author: Climate Cascades
 publishDate: 2020/10/22 1:23 PM +0000
 category: feature
-title: This is a test feature with a very, very long title. 
+title: This is a test feature with a very, very long title.
 description: The description is really pretty big as well. Probably way too big.
 img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603200087/climatecascades/_DSC0995_rzcfa2.jpg
-alt: 'Mountains on the rise'
-topics: 
-    - mountains,
-    - oceans,
-    - mitigation
-
-regions: 
-    - Global,
-    - Asia
+alt: Mountains on the rise
+topics:
+- mountains,
+- oceans,
+- mitigation
+regions:
+- Global,
+- Asia
 
 ---
 Archaeologists working in Nepal have uncovered evidence of a structure at the birthplace of the Buddha dating back to the sixth century B.C. This is the first archaeological material linking the life of the Buddha — and thus the first flowering of Buddhism — to a specific century.
@@ -24,3 +23,4 @@ Pioneering excavations within the Sacred Garden of Lumbini, Nepal, a UNESCO Worl
 
 The archaeological investigation was funded by the Government of Japan in partnership with the Government of Nepal under a UNESCO project aimed at strengthening the conservation and management of Lumbini The research was also supported by Durham and Stirling Universities in the UK and the National Geographic Society’s Global Exploration Fund.
 
+    <h2><b>let's get it on</b></h2>

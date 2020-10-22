@@ -15,19 +15,11 @@ fields:
     max: 
     min: 20
 - name: author
-  type: select
-  default: Climate Cascades
+  type: text
   config:
     required: true
-    options:
-    - David
-    - Climate Cascades
-    source:
-      type: documents
-      section: authors
-      file: content/authors/authors.md
-      path: ''
   label: Author
+  description: 'First name - Last name<br>Unknown? : Climate Cascades'
 - name: publishDate
   type: datetime
   label: Publish date

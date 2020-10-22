@@ -76,12 +76,14 @@
             Features
           </li></NuxtLink
         >
-        <li
-          class="mt-4 border-b border-blue-900 hover:bg-gray-100"
-          @click="isOpen = false"
+        <NuxtLink to="/topics">
+          <li
+            class="mt-4 border-b border-blue-900 hover:bg-gray-100"
+            @click="isOpen = false"
+          >
+            Topics
+          </li></NuxtLink
         >
-          Topics
-        </li>
         <!-- <NuxtLink to="/post/topic/nuxtjs">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">
             Geopolitics

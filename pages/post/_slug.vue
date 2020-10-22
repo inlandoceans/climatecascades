@@ -100,15 +100,13 @@ export default {
       .surround(params.slug)
       .fetch()
     const template = article.category === 'feature'
-    const authorLink = article.author.toLowerCase().replace(/\s/g, '-')
 
     return {
       article,
       topics,
       prev,
       next,
-      template,
-      authorLink
+      template
     }
   },
   computed: {

@@ -91,7 +91,8 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     // Doc: https://nuxtjs.org/blog/going-dark-with-nuxtjs-color-mode/
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg'
   ],
   purgeCSS: {
     whitelist: ['dark-mode', 'bg-mayas-green-dark']

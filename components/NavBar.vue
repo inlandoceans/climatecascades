@@ -1,23 +1,25 @@
 <template>
-  <nav class="">
-    <button
-      class="z-10 absolute right-0 top-0 mr-4 mt-6 md:mr-8 md:mt-12"
-      aria-label="Open Menu"
-      @click="drawer"
-    >
-      <svg
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        class="w-8 h-8"
-      >
-        <path d="M4 6h16M4 12h16M4 18h16" class="dark:text-white"></path>
-      </svg>
-    </button>
-
+  <nav class="z-10 absolute right-0 top-0 mr-4 mt-6 md:mr-8 md:mt-12">
+    <ul class="flex items-center">
+      <li class="mr-4">
+        <ColorModePicker class="dark:text-white" />
+      </li>
+      <li>
+        <button class="outline-none" aria-label="Open Menu" @click="drawer">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            class="w-8 h-8"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" class="dark:text-white"></path>
+          </svg>
+        </button>
+      </li>
+    </ul>
     <div class="flex items-center">
       <div class="hidden md:block md:justify-between md:bg-transparent"></div>
     </div>
@@ -46,11 +48,12 @@
       class="transform top-0 right-0 w-64 bg-white dark:bg-darkbg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
-      <h2 class="mt-6 dark:text-darktitle">
-        <span class="text-4xl">Climate</span>
-        <span class="uppercase text-lg">Cascades</span>
-      </h2>
       <NuxtLink to="/">
+        <h2 class="mt-6 dark:text-darktitle">
+          <span class="text-4xl">Climate</span>
+          <span class="uppercase text-lg">Cascades</span>
+        </h2>
+
         <img src="/logo.png" alt="logo" class="pl-6 pr-6 object-contain" />
       </NuxtLink>
       <AppSearchInput class="mt-8 my-2 px-2 text-md normal-case text-red-900" />

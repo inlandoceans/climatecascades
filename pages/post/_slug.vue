@@ -7,7 +7,13 @@
           class="heroImage opacity-100 max-h-screen"
           :style="{ backgroundImage: `url(${article.img})` }"
         >
-          <NavBarFeature />
+          <div class="pt-16 mt-16 text-center z-10">
+            <NuxtLink to="/">
+              <span class="text-6xl leading-none text-white"> Climate</span>
+              <span class="uppercase text-2xl text-white">Cascades</span>
+            </NuxtLink>
+          </div>
+          <NavBar class="text-white" />
           <div class="herobox relative z-10 py-4 my-64">
             <h2
               class="max-w-lg text-4xl font-semibold text-white dark:text-darktitle px-5"
@@ -22,7 +28,7 @@
         </div>
       </div>
 
-      <div class="max-w-4xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
+      <div class="max-w-2xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
         <p class="l mb-4 dark:text-darkcontent font-semibold">
           {{ article.description }}
         </p>
@@ -50,7 +56,7 @@
           <span class="text-red-900 text-lg dark:text-darkhighlight">
             By {{ article.author.name }}
           </span>
-          <p class="text-lg font-semibold mb-4">{{ article.description }}</p>
+          <p class="text-lg font-semibold mb-8">{{ article.description }}</p>
         </div>
         <!-- <span v-for="(topic, id) in article.topics" :key="id">
           <NuxtLink :to="`/blog/topic/${topics[topic].slug}`">

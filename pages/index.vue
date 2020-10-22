@@ -1,44 +1,38 @@
 <template>
-  <div class="box-border">
+  <div>
     <HeroPost :post="heroPost" />
     <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
       <div class="flex justify-between items-center">
         <NuxtLink to="/reacts">
-          <h2 class="text-4xl font-spectral dark:text-darktitle">Reacts</h2>
+          <h2 class="postList text-4xl dark:text-darktitle">Reacts</h2>
         </NuxtLink>
         <NuxtLink to="/reacts">
-          <h3 class="uppercase mr-6">All Reacts</h3>
+          <h3
+            class="uppercase mr-6 border-b-2 border-solid font-semibold border-red-800"
+          >
+            All Reacts
+          </h3>
         </NuxtLink>
       </div>
       <Articles :articles="articles" />
     </div>
-    <div class="box-border bg-red-900 h-16"></div>
+    <div class="bg-red-900 h-8"></div>
     <div class="mx-4 sm:mx-8 xl:mx-24 my-8">
       <div class="flex justify-between items-center">
         <NuxtLink to="/features">
-          <h2 class="text-4xl font-spectral dark:text-darktitle">Features</h2>
+          <h2 class="featureList text-4xl dark:text-darktitle">Features</h2>
         </NuxtLink>
         <NuxtLink to="/features">
-          <h3 class="uppercase mr-6">All Features</h3>
+          <h3
+            class="uppercase mr-6 border-b-2 border-solid font-semibold border-blue-800"
+          >
+            All Features
+          </h3>
         </NuxtLink>
       </div>
       <Features :features="features" />
     </div>
-    <!-- <h3 class="mb-4 font-bold text-2xl uppercase text-center">Topics</h3>
-    <ul class="flex flex-wrap mb-4 text-center">
-      <li
-        v-for="topic of topics"
-        :key="topic.slug"
-        class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
-      >
-        <NuxtLink :to="`/post/topic/${topic.slug}`" class="">
-          <p class="font-bold text-gray-600 uppercase tracking-wider text-ss">
-            {{ topic.name }}
-          </p>
-        </NuxtLink>
-      </li>
-    </ul> -->
-    <div class="box-border bg-blue-900 h-16"></div>
+    <div class="bg-blue-900 h-8"></div>
   </div>
 </template>
 
@@ -92,17 +86,51 @@ export default {
   }
 }
 </script>
+<style scoped>
+.postList {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  letter-spacing: 3px;
+  line-height: 1.273;
+}
 
-<style class="postcss">
-.article-card {
-  border-radius: 8px;
-  font-family: spectral, serif;
+.postList::before {
+  background: #9b2c2c;
+  content: '';
+  display: block;
+  -webkit-flex: 0 0 5px;
+  -ms-flex: 0 0 5px;
+  flex: 0 0 5px;
+  margin-bottom: 6px;
+  margin-right: 20px;
+  margin-top: 5px;
+  position: relative;
 }
-.article-card a {
-  background-color: #fff;
-  border-radius: 8px;
+
+.featureList {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  letter-spacing: 3px;
+  line-height: 1.273;
 }
-.article-card img div {
-  border-radius: 8px 0 0 8px;
+.featureList::before {
+  background: #2c5282;
+  content: '';
+  display: block;
+  -webkit-flex: 0 0 5px;
+  -ms-flex: 0 0 5px;
+  flex: 0 0 5px;
+  margin-bottom: 6px;
+  margin-right: 20px;
+  margin-top: 5px;
+  position: relative;
 }
 </style>

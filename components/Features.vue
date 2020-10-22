@@ -12,16 +12,16 @@
         <img
           :src="article.img"
           :alt="article.alt"
-          class="w-full h-48 object-cover object-top"
+          class="w-full h-64 object-cover"
         />
       </NuxtLink>
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class="col-span-5 md:col-span-2 border-b border-solid border-blue-800"
+        class="col-span-5 md:col-span-2 border-b-2 border-solid border-blue-800"
       >
         <div class="px-4">
           <h2
-            class="text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
+            class="pt-4 text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
           >
             {{ article.title }}
           </h2>
@@ -40,6 +40,7 @@
           </p>
         </div>
       </NuxtLink>
+      <div class="w-1/2 mt-2 border-t-4 border-solid border-blue-800"></div>
     </div>
   </div>
 </template>

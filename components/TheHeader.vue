@@ -1,5 +1,5 @@
 <template>
-  <header class="text-center items-center pt-2">
+  <header class="sm:text-center items-center pt-2 pl-2 sm:pl-0 mx-auto">
     <NuxtLink to="/">
       <span class="text-4xl md:text-6xl leading-none dark:text-darktitle"
         >Climate</span
@@ -10,13 +10,11 @@
     </NuxtLink>
     <NavBar />
 
-    <NuxtLink to="/">
-      <img
-        src="/logo.png"
-        alt="logo"
-        class="text-center pl-16 pr-16 mx-auto mb-4"
-      />
-    </NuxtLink>
+    <img
+      src="/logo.png"
+      alt="logo"
+      class="sm:text-center pl-2 pr-32 sm:pl-16 sm:pr-16 sm:mx-auto mb-4"
+    />
     <div>
       <!-- <AppSearchInput class="ml-8 items-center" /> -->
     </div>
@@ -36,15 +34,6 @@
         <li class="mx-3">•</li>
 
         <NuxtLink to="/about"> <li class="">About</li></NuxtLink>
-        <li class="mx-3">•</li>
-        <li>
-          <button
-            class="uppercase font-crimsonpro text-lg font-semibold focus:outline-none"
-            @click="toggle"
-          >
-            Theme
-          </button>
-        </li>
       </ul>
     </nav>
   </header>

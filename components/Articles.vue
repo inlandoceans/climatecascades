@@ -21,12 +21,12 @@
       >
         <div class="md:block">
           <span v-for="topic in article.topics" :key="topic">
-            <span class="truncate lowercase text-sm text-gray-600 my-4">
+            <span class="truncate lowercase text-sm text-blue-900 my-4">
               {{ topic }}
             </span>
           </span>
           <h2
-            class="text-xl md:text-2xl font-crimsonpro font-semibold text-blue-900 dark:text-darkheading"
+            class="text-xl md:text-2xl font-crimsonpro font-semibold text-blue-900 hover:text-blue-700 dark:text-darkheading"
           >
             {{ article.title }}
           </h2>

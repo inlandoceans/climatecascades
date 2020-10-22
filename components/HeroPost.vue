@@ -1,22 +1,21 @@
 <template>
   <div>
-    <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }" class="">
+    <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }">
       <div
-        class="heroImage sm:px-8 sm:py-4 md:px-16 md:pt-8 md:pb-8 lg:pb-16 opacity-100"
+        class="heroImage ease-in-out sm:px-8 sm:py-4 md:px-16 md:pt-8 md:pb-8 lg:pb-16"
         :style="{ backgroundImage: `url(${post.img})` }"
       >
-        <div class="herobox relative z-10 py-4 my-24">
+        <div class="relative z-10 py-4 my-24 lg:my-32">
           <h2
-            class="max-w-lg text-4xl font-semibold text-white dark:text-darktitle px-5"
+            class="max-w-xl text-4xl font-semibold text-white dark:text-darktitle px-5"
           >
             {{ post.title }}
           </h2>
           <span class="uppercase text-white dark:text-darktitle font-bold">
             {{ $formatDate(post.publishDate) }}
           </span>
-          <p class="text-sm font-spectral text-white">by {{ post.author }}</p>
           <p
-            class="px-10 max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg font-crimsonpro"
+            class="px-10 max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg"
           >
             {{ post.description }}
           </p>
@@ -48,6 +47,7 @@ export default {
   text-align: center;
   box-sizing: border-box;
 }
+
 .heroImage::after {
   content: '';
   display: block;
@@ -58,6 +58,10 @@ export default {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.heroImage:hover::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 2000ms linear;
 }
 .herobox {
   border: 3px solid white;

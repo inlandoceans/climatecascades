@@ -35,11 +35,7 @@
             </td>
           </tr>
         </tbody>
-      </table>
-    </div>
 
-    <div class="overflow-hidden px-4 col-span-1 mt-4">
-      <table class="table-auto mx-auto">
         <thead>
           <tr>
             <h1

@@ -24,6 +24,6 @@ Pioneering excavations within the Sacred Garden of Lumbini, Nepal, a UNESCO Worl
 The archaeological investigation was funded by the Government of Japan in partnership with the Government of Nepal under a UNESCO project aimed at strengthening the conservation and management of Lumbini The research was also supported by Durham and Stirling Universities in the UK and the National Geographic Society’s Global Exploration Fund.
 
 <h2>We are here to help</h2>
-<app-search-input /> 
+<app-search-input></app-search-input> 
 
 And we write some more.

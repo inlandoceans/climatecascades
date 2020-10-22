@@ -13,7 +13,7 @@
               <span class="uppercase text-2xl text-white">Cascades</span>
             </NuxtLink>
           </div>
-          <NavBar class="text-white" />
+          <NavBar class="text-white z-50" />
           <div class="herobox relative z-10 py-4 my-64">
             <h2
               class="max-w-lg text-4xl font-semibold text-white dark:text-darktitle px-5"
@@ -29,12 +29,12 @@
         </div>
       </div>
 
-      <div class="max-w-2xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
+      <div class="z-10 max-w-2xl mx-auto h-full px-12 my-4 text-lg sm:text-xl">
         <p class="l mb-4 dark:text-darkcontent font-semibold">
           {{ article.description }}
         </p>
         <!-- content from markdown -->
-        <nuxt-content :document="article" class="dark:text-darkcontent" />
+        <nuxt-content :document="article" class="dark:text-darkcontent z-10" />
 
         <!-- prevNext component -->
         <PrevNext :prev="prev" :next="next" class="mt-8" />

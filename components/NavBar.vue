@@ -58,7 +58,7 @@
       </NuxtLink>
       <AppSearchInput class="mt-8 my-2 px-2 text-md normal-case text-red-900" />
       <ul
-        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading z-50"
+        class="mx-auto my-8 px-8 font-semibold text-lg text-left uppercase text-blue-900 dark:text-darkheading"
       >
         <li
           class="mt-4 border-b border-blue-900 hover:bg-gray-100"

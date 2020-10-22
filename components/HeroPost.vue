@@ -2,7 +2,7 @@
   <div>
     <NuxtLink :to="{ name: 'post-slug', params: { slug: post.slug } }">
       <div
-        class="heroImage ease-in-out sm:px-8 sm:py-4 md:px-16 md:pt-8 md:pb-8 lg:pb-16"
+        class="z-0 heroImage ease-in-out sm:px-8 sm:py-4 md:px-16 md:pt-8 md:pb-8 lg:pb-16"
         :style="{ backgroundImage: `url(${post.img})` }"
       >
         <div class="relative z-10 py-4 my-24 lg:my-32">
@@ -59,10 +59,12 @@ export default {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.heroImage:hover::after {
+
+/* .heroImage:hover::after {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 2000ms linear;
-}
+} */
+
 .herobox {
   border: 3px solid white;
 }

@@ -19,4 +19,5 @@ fields:
   name: img
   label: Picture
 pages:
+- content/authors/david.md
 - content/authors/milan.md

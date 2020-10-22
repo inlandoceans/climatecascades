@@ -31,6 +31,7 @@
             {{ $formatDate(article.publishDate) }}
           </span>
           <span class="mx-2 dark:text-darkhighlight">•</span>
+
           <span class="text-red-900 text-md dark:text-darkhighlight">
             By {{ article.author.name }}
           </span>

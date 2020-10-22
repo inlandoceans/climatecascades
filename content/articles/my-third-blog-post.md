@@ -22,11 +22,6 @@ This is some more info
   This is HTML inside markdown that has a class some classes
 </div>
 
-<info-box>
-  <template #info-box>
-    This is a vue component inside markdown using slots
-  </template>
-</info-box>
 
 ```js[nuxt.config.js]
 export default {

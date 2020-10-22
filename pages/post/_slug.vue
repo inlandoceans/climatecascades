@@ -24,6 +24,7 @@
               {{ $formatDate(article.publishDate) }}
             </span>
             <span class="text-xl text-white"> by {{ article.author }} </span>
+            >
           </div>
         </div>
       </div>

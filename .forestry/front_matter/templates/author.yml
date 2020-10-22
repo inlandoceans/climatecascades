@@ -4,10 +4,12 @@ hide_body: false
 fields:
 - type: text
   name: name
-  label: name
+  label: Name
+  config:
+    required: true
 - type: text
   name: description
-  label: description
+  label: Description
 - type: textarea
   name: img
-  label: img
+  label: Picture

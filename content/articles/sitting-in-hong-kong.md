@@ -1,5 +1,5 @@
 ---
-author: content/authors/milan.md
+author: Milan Ismangil
 publishDate: 2020/10/22 3:18 PM +0200
 category: feature
 title: Sitting in Hong Kong

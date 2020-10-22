@@ -1,4 +1,0 @@
----
-authors: Climate Cascades
-
----

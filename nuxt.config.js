@@ -124,7 +124,7 @@ export default {
    */
   build: {},
   sitemap: {
-    hostname: process.env.BASE_URL,
+    hostname: 'https://climatecascades.netlify.app/',
     routes() {
       return getRoutes()
     }

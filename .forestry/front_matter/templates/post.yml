@@ -2,6 +2,20 @@
 label: Post
 hide_body: false
 fields:
+- name: category
+  type: select
+  default: reacts
+  config:
+    required: true
+    options:
+    - reacts
+    - feature
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 - type: text
   name: title
   label: Title
@@ -31,26 +45,6 @@ fields:
     display_utc: false
     export_format: YYYY/MM/DD h:mm A ZZ
   default: now
-- name: category
-  type: select
-  default: reacts
-  config:
-    required: true
-    options:
-    - reacts
-    - feature
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Category
-- type: file
-  name: img
-  label: Cover Image
-- type: text
-  name: alt
-  label: Cover Alt Text
 - name: regions
   type: list
   config:
@@ -69,6 +63,12 @@ fields:
     source:
       type: pages
       section: topics
+- type: file
+  name: img
+  label: Cover Image
+- type: text
+  name: alt
+  label: Cover Alt Text
 pages:
 - content/articles/excavations.md
 - content/articles/in-nepal-where-the-rain-falls.md

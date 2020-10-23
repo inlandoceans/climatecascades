@@ -51,6 +51,12 @@ fields:
 - type: text
   name: alt
   label: Cover Alt Text
+- name: region
+  type: text
+  config:
+    required: false
+  label: Region
+  description: Global, arctics, or a continent.
 - type: list
   name: topics
   label: Topics

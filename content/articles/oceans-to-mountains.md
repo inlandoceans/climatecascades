@@ -10,5 +10,6 @@ topics:
 - Oceans
 - Adaptation
 - Mountains
+region: Oceania
 
 ---

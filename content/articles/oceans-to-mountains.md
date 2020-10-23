@@ -13,5 +13,6 @@ region: Oceania
 regions:
 - Asia
 - Global
+- Oceania
 
 ---

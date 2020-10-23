@@ -20,6 +20,7 @@ fields:
   name: order
   label: order
 pages:
+- content/regions/africa.md
 - content/regions/arctics.md
 - content/regions/asia.md
 - content/regions/europe.md

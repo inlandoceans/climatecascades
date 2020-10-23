@@ -34,6 +34,14 @@ fields:
     required: true
   label: Author
   description: 'First name - Last name<br>Unknown? : Climate Cascades'
+- name: regions
+  type: tag_list
+  default: []
+  label: Regions
+- name: topics
+  type: tag_list
+  default: []
+  label: Topics
 - name: publishDate
   type: datetime
   label: Publish date
@@ -45,26 +53,6 @@ fields:
     display_utc: false
     export_format: YYYY/MM/DD h:mm A ZZ
   default: now
-- name: regions
-  type: select
-  default: ''
-  config:
-    required: false
-    options:
-    - Global
-    - Africa
-    - Arctics
-    - Asia
-    - Europe
-    - North America
-    - Oceania
-    - South America
-    source:
-      type: simple
-      section: ''
-      file: 
-      path: 
-  label: Regions
 - type: file
   name: img
   label: Cover Image

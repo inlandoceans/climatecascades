@@ -1,6 +1,6 @@
 <template>
   <div class="px-8 pt-4">
-    <div class="text-center">
+    <div class="mb-4 text-center">
       <h1 class="text-4xl font-bold">
         {{ region.name }}
       </h1>
@@ -49,7 +49,7 @@
             </span>
             <span class="mx-1 dark:text-darkhighlight">•</span>
             <span class="text-red-900 text-md dark:text-darkhighlight">
-              By {{ article.author.name }}
+              By {{ article.author }}
             </span>
 
             <p class="my-2 text-lg dark:text-darkcontent">
@@ -100,7 +100,7 @@
             </span>
             <span class="mx-1 dark:text-darkhighlight">•</span>
             <span class="text-red-900 text-md dark:text-darkhighlight">
-              By {{ article.author.name }}
+              By {{ article.author }}
             </span>
 
             <p class="my-2 text-lg dark:text-darkcontent">

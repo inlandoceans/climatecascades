@@ -11,7 +11,7 @@
         :key="topic.slug"
         class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
       >
-        <NuxtLink :to="`/post/topic/${topic.slug}`">
+        <NuxtLink :to="`/topic/${topic.slug}`">
           <p
             class="font-bold text-gray-600 dark:text-darkheading hover:underline uppercase tracking-wider text-ss"
           >

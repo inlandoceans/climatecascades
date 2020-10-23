@@ -17,3 +17,5 @@ fields:
 - type: number
   name: order
   label: order
+pages:
+- content/topics/geopolitics.md

@@ -51,7 +51,7 @@ fields:
 - type: text
   name: alt
   label: Cover Alt Text
-- name: region
+- name: regions
   type: text
   config:
     required: false
@@ -61,7 +61,10 @@ fields:
   name: topics
   label: Topics
   config:
-    use_select: false
+    use_select: true
+    source:
+      type: pages
+      section: regions
 pages:
 - content/articles/excavations.md
 - content/articles/in-nepal-where-the-rain-falls.md

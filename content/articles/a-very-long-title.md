@@ -7,9 +7,10 @@ description: The description is really pretty big as well. Probably way too big.
 img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603200087/climatecascades/_DSC0995_rzcfa2.jpg
 alt: Mountains on the rise
 topics:
-- mountains,
-- oceans,
+- adaptation
 - mitigation
+- oceans
+- mountains
 regions:
 - Global
 - Asia

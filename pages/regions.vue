@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h3 class="mb-4 font-bold text-2xl uppercase text-center">Regions</h3>
+    <h3
+      class="mb-4 font-bold text-2xl uppercase text-center dark:text-darktitle"
+    >
+      Regions
+    </h3>
     <ul class="flex flex-wrap mb-4 text-center">
       <li
         v-for="region of regions"
@@ -8,7 +12,9 @@
         class="xs:w-full md:w-1/3 lg:flex-1 px-2 text-center"
       >
         <NuxtLink :to="`/region/${region.slug}`" class="">
-          <p class="font-bold text-gray-600 uppercase tracking-wider text-ss">
+          <p
+            class="font-bold text-gray-600 dark:text-darkheading hover:underline uppercase tracking-wider text-ss"
+          >
             {{ region.name }}
           </p>
         </NuxtLink>

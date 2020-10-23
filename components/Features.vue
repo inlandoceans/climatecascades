@@ -17,7 +17,7 @@
       </NuxtLink>
       <NuxtLink
         :to="{ name: 'post-slug', params: { slug: article.slug } }"
-        class="col-span-5 md:col-span-2 border-b-2 border-solid border-blue-800"
+        class="col-span-5 md:col-span-2 md:border-b-2 md:border-solid md:border-blue-800"
       >
         <div class="px-4">
           <h2

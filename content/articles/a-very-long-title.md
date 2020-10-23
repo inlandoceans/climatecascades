@@ -2,7 +2,7 @@
 author: Climate Cascades
 publishDate: 2020/10/22 1:23 PM +0000
 category: feature
-title: This is a test feature with a very, very long title.
+title: This is a test.
 description: The description is really pretty big as well. Probably way too big.
 img: https://res.cloudinary.com/devy3xovo/image/upload/c_scale,w_auto:100,dpr_auto/v1603200087/climatecascades/_DSC0995_rzcfa2.jpg
 alt: Mountains on the rise

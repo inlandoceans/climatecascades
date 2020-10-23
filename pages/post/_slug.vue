@@ -4,7 +4,7 @@
     <div v-if="template">
       <div>
         <div
-          class="heroImage opacity-100 max-h-screen"
+          class="heroImage opacity-100 md:h-screen"
           :style="{ backgroundImage: `url(${article.img})` }"
         >
           <div class="pt-16 mt-16 text-center z-10">

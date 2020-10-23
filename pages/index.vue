@@ -9,7 +9,7 @@
         <NuxtLink to="/archives/#reacts">
           <h3
             id="reacts"
-            class="uppercase mr-6 border-b-2 border-solid font-semibold border-red-800"
+            class="uppercase mr-6 border-b-2 border-solid font-semibold dark:text-darkhighlight border-red-800"
           >
             All Reacts
           </h3>
@@ -26,7 +26,7 @@
         <NuxtLink to="/archives/#features">
           <h3
             id="features"
-            class="uppercase mr-6 border-b-2 border-solid font-semibold border-blue-800"
+            class="uppercase mr-6 border-b-2 border-solid font-semibold dark:text-darkhighlight border-blue-800"
           >
             All Features
           </h3>

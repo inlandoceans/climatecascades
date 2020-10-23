@@ -6,14 +6,14 @@
           <tr>
             <h1
               id="features"
-              class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
+              class="pl-8 font-bold text-xl text-red-900 dark:text-darkhighlight"
             >
               Features
             </h1>
           </tr>
           <tr></tr>
         </thead>
-        <tbody>
+        <tbody class="text-lg">
           <tr v-for="article of features" :key="article.slug">
             <td class="px-4">
               <p class="dark:text-darkcontent">
@@ -27,9 +27,7 @@
                 <span class="dark:text-darkcontent">{{ article.title }}</span>
               </NuxtLink>
 
-              <span
-                class="text-sm font-spectral text-red-900 dark:text-darkheading"
-              >
+              <span class="text-red-900 dark:text-darkheading">
                 by
                 {{ article.author.name }}
               </span>
@@ -41,14 +39,14 @@
           <tr>
             <h1
               id="reacts"
-              class="pl-8 font-bold text-lg text-red-900 dark:text-darkhighlight"
+              class="pl-8 font-bold text-xl text-red-900 dark:text-darkhighlight"
             >
               Reacts
             </h1>
           </tr>
           <tr></tr>
         </thead>
-        <tbody>
+        <tbody class="text-lg">
           <tr v-for="article of articles" :key="article.slug">
             <td class="px-4">
               <p class="dark:text-darkcontent">
@@ -62,9 +60,7 @@
                 <span class="dark:text-darkcontent">{{ article.title }}</span>
               </NuxtLink>
 
-              <span
-                class="text-sm font-spectral text-red-900 dark:text-darkheading"
-              >
+              <span class="text-red-900 dark:text-darkheading">
                 by
                 {{ article.author.name }}
               </span>
@@ -73,6 +69,7 @@
         </tbody>
       </table>
     </div>
+    <div class="h-screen"></div>
   </div>
 </template>
 

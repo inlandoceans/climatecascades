@@ -131,7 +131,7 @@
         <NuxtLink to="/region/global">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Global</li>
         </NuxtLink>
-        <NuxtLink to="/region/Africa">
+        <NuxtLink to="/region/africa">
           <li class="pl-4 hover:bg-gray-100" @click="isOpen = false">Africa</li>
         </NuxtLink>
         <NuxtLink to="/region/arctics">

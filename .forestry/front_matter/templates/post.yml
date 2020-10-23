@@ -60,7 +60,4 @@ fields:
   name: alt
   label: Cover Alt Text
 pages:
-- content/articles/a-very-long-title.md
-- content/articles/excavations.md
-- content/articles/in-nepal-where-the-rain-falls.md
-- content/articles/oceans-to-mountains.md
+- content/articles/climate-change-and-geopolitics.md

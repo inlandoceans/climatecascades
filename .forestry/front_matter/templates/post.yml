@@ -46,23 +46,25 @@ fields:
     export_format: YYYY/MM/DD h:mm A ZZ
   default: now
 - name: regions
-  type: list
+  type: select
+  default: ''
   config:
-    use_select: true
-    min: 
-    max: 
+    required: false
+    options:
+    - Global
+    - Africa
+    - Arctics
+    - Asia
+    - Europe
+    - North America
+    - Oceania
+    - South America
     source:
-      type: documents
-      section: regions
+      type: simple
+      section: ''
+      file: 
+      path: 
   label: Regions
-- type: list
-  name: topics
-  label: Topics
-  config:
-    use_select: true
-    source:
-      type: pages
-      section: topics
 - type: file
   name: img
   label: Cover Image

@@ -52,7 +52,7 @@ fields:
     min: 
     max: 
     source:
-      type: pages
+      type: documents
       section: regions
   label: Regions
 - type: list

@@ -20,4 +20,7 @@ fields:
   name: order
   label: order
 pages:
+- content/regions/arctics.md
+- content/regions/global.md
 - content/regions/oceania.md
+- content/regions/s-america.md

@@ -21,6 +21,7 @@ fields:
   label: order
 pages:
 - content/regions/arctics.md
+- content/regions/asia.md
 - content/regions/europe.md
 - content/regions/global.md
 - content/regions/n-america.md

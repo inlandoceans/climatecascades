@@ -52,11 +52,15 @@ fields:
   name: alt
   label: Cover Alt Text
 - name: regions
-  type: text
+  type: list
   config:
-    required: false
-  label: Region
-  description: Global, arctics, or a continent.
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: regions
+  label: Regions
 - type: list
   name: topics
   label: Topics
@@ -64,7 +68,7 @@ fields:
     use_select: true
     source:
       type: pages
-      section: regions
+      section: topics
 pages:
 - content/articles/excavations.md
 - content/articles/in-nepal-where-the-rain-falls.md

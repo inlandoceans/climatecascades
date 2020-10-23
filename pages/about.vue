@@ -3,7 +3,7 @@
     <h1 class="text-4xl">About</h1>
     <img src="/tempbars.png" />
     <p class="text-sm uppercase">Average temperature anomalies, by NOAA</p>
-    <h2 class="mt-8 text-2xl">Climate Cascades</h2>
+    <h2 class="mt-8 text-2xl font-semibold">Climate Cascades</h2>
     <p class="mt-4 text-lg">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
       viverra at diam sed vehicula. Donec et eros et neque faucibus
@@ -12,14 +12,14 @@
       luctus. Nunc tincidunt lacinia tortor quis commodo. Vivamus tempor
       condimentum lacus, ac sodales ipsum.
     </p>
-    <p>
+    <p class="mt-4 text-lg">
       Etiam finibus mattis pretium. Mauris tincidunt maximus ligula, vel euismod
       est tempus eget. Quisque lacinia lobortis rhoncus. Maecenas id ligula et
       ex sagittis venenatis non quis orci. Vivamus in lacinia massa. Suspendisse
       non quam nec elit pharetra dapibus. Vestibulum dolor lorem, iaculis et
       augue ac, accumsan fringilla orci.
     </p>
-    <p>
+    <p class="mt-4 text-lg">
       Aenean efficitur volutpat porttitor. Nunc dapibus tempus ipsum. Nunc
       cursus pellentesque eros, non ullamcorper sapien maximus non. Etiam
       fringilla rhoncus justo quis interdum. Fusce viverra nibh ut erat

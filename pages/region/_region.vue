@@ -4,11 +4,11 @@
       <h1 class="text-4xl font-bold">
         {{ region.name }}
       </h1>
-      <p class="">{{ region.description }}</p>
+      <p class="text-lg">{{ region.description }}</p>
 
       <nuxt-content :document="region" />
     </div>
-    <h3 class="border-b-2 border-solid border-blue-800">
+    <h3 class="text-2xl font-semibold border-b-2 border-solid border-blue-800">
       Features tagged {{ region.name }}:
     </h3>
     <div class="grid md:grid-cols-3 gap-x-12 gap-y-8">
@@ -47,19 +47,19 @@
             >
               {{ $formatDate(article.publishDate) }}
             </span>
-            <span class="mx-2 dark:text-darkhighlight">•</span>
+            <span class="mx-1 dark:text-darkhighlight">•</span>
             <span class="text-red-900 text-md dark:text-darkhighlight">
               By {{ article.author.name }}
             </span>
 
-            <p class="my-2 text-md dark:text-darkcontent">
+            <p class="my-2 text-lg dark:text-darkcontent">
               {{ article.description }}
             </p>
           </div>
         </NuxtLink>
       </div>
     </div>
-    <h3 class="border-b-2 border-solid border-blue-800">
+    <h3 class="text-2xl font-semibold border-b-2 border-solid border-blue-800">
       Reacts tagged {{ region.name }}:
     </h3>
     <div class="grid md:grid-cols-3 gap-x-12 gap-y-8">
@@ -98,12 +98,12 @@
             >
               {{ $formatDate(article.publishDate) }}
             </span>
-            <span class="mx-2 dark:text-darkhighlight">•</span>
+            <span class="mx-1 dark:text-darkhighlight">•</span>
             <span class="text-red-900 text-md dark:text-darkhighlight">
               By {{ article.author.name }}
             </span>
 
-            <p class="my-2 text-md dark:text-darkcontent">
+            <p class="my-2 text-lg dark:text-darkcontent">
               {{ article.description }}
             </p>
           </div>

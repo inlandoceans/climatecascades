@@ -5,7 +5,12 @@
         <ColorModePicker class="dark:text-white" />
       </li>
       <li>
-        <button class="outline-none" aria-label="Open Menu" @click="drawer">
+        <button
+          class="outline-none"
+          aria-label="Open Menu"
+          name="menu"
+          @click="drawer"
+        >
           <svg
             fill="none"
             stroke="currentColor"
@@ -49,7 +54,7 @@
       :class="isOpen ? '-translate-x-0' : 'translate-x-full'"
     >
       <NuxtLink to="/">
-        <h2 class="mt-6 dark:text-darktitle">
+        <h2 class="mt-6 dark:text-darktitle text-center">
           <span class="text-4xl">Climate</span>
           <span class="uppercase text-lg">Cascades</span>
         </h2>

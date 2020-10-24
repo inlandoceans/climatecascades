@@ -2,6 +2,7 @@
   <div>
     <input
       v-model="searchQuery"
+      name="search"
       type="search"
       autocomplete="off"
       placeholder="Search Articles"

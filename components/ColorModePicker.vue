@@ -1,5 +1,9 @@
 <template>
-  <button class="outline-none focus:outline-none" @click="toggleDarkMode()">
+  <button
+    class="outline-none focus:outline-none"
+    name="theme"
+    @click="toggleDarkMode()"
+  >
     <ColorScheme placeholder="..." tag="span">
       <span v-if="$colorMode.value === 'dark'">
         <svg

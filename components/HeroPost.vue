@@ -15,7 +15,7 @@
             {{ $formatDate(post.publishDate) }}
           </span>
           <p
-            class="px-10 max-w-md mx-auto mt-6 mb-4 text-white dark:text-darkcontent text-lg"
+            class="px-10 max-w-md mx-auto mt-10 mb-4 font-semibold text-white dark:text-darkcontent text-lg"
           >
             {{ post.description }}
           </p>
@@ -57,7 +57,7 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* .heroImage:hover::after {

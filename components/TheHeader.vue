@@ -13,7 +13,7 @@
     <img
       src="/logo.png"
       alt="logo"
-      class="sm:text-center pl-2 pr-32 sm:pl-16 sm:pr-16 sm:mx-auto mb-4"
+      class="sm:pl-2 h-2 w-1/3 sm:text-center sm:mx-auto mb-8"
     />
     <div>
       <!-- <AppSearchInput class="ml-8 items-center" /> -->
